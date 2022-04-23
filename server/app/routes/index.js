@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const bodyParser = require("body-parser");
 
+const commercialRouter = require("./commercial");
+
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
@@ -16,5 +18,6 @@ router.get("/", (_, res) => {
     message: "Hello world!".split("").reverse().join(""),
   });
 });
+router.use("/commercial", commercialRouter);
 
 module.exports = router;
