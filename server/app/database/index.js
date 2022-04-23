@@ -8,16 +8,11 @@ const connectDatabase = () => {
     useUnifiedTopology: true,
   });
 
-  mongoose.connection.on("connected", () => {
+  mongoose.connection.on("connected", async () => {
     console.log("Mongoose connected to database");
   });
 
   return mongoose.connection;
-};
-
-const loadDatabaseModels = () => {
-  console.log("Loading database models...");
-  console.log("Models successfully loaded into mongoose");
 };
 
 const buildConnectionUri = () => {
@@ -27,4 +22,4 @@ const buildConnectionUri = () => {
   return `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}/${MONGO_DB}?retryWrites=true&w=majority`;
 };
 
-module.exports = { connectDatabase, loadDatabaseModels };
+module.exports = { connectDatabase };
