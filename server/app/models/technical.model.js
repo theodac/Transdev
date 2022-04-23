@@ -40,7 +40,10 @@ const TechnicalSchema = new Schema({
   },
   etatDuParc: {
       type: String
-  }
+  },
+    dataDate: {
+        type: Date
+    }
 });
 
 module.exports = mongoose.model("Technical", TechnicalSchema);

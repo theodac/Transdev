@@ -37,6 +37,9 @@ const CommercialSchema = new Schema({
       },
     ],
   },
+  dataDate: {
+    type: Date
+  }
 });
 
 module.exports = mongoose.model("Commercial", CommercialSchema);

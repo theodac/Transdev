@@ -13,6 +13,9 @@ const QualityEnvironmentSchema = new Schema({
   },
   nbSignalementsNonRespectesPqe: {
     type: Number
+  },
+  dataDate: {
+    type: Date
   }
 });
 

@@ -1,4 +1,5 @@
 const Commercial = require("../models/commercial.model");
+const Moment = require("moment");
 
 module.exports = {
   async createCommercial(req, res) {
@@ -50,6 +51,33 @@ module.exports = {
       success: true,
       data: commercial,
     });
+  },
+  async getCommercialsByDate(req, res) {
+    const { startDate, endDate } = req.params;
+
+    const commercials = []
+    if (endDate !== null || endDate !== "") {
+      commercials = await Commercial.find({
+        dataDate: {
+          $gte: startDate.toDate(),
+          $lte: endDate.toDate()
+        }
+      })
+    } else {
+      commercials = await Commercial.find({dataDate: startDate.toDate()})
+    }
+
+    if(!commercials || commercials.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: "Commercial entries not found"
+      })
+    }
+
+    res.status(200).json({
+      success: true,
+      data: commercials
+    })
   },
   async updateCommercial(req, res) {
     const { id } = req.params;
