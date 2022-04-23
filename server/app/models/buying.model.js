@@ -25,6 +25,9 @@ const BuyingSchema = new Schema({
   },
   tauxFournisseursCertifISO: {
     type: Number
+  },
+  dataDate: {
+    type: Date
   }
 });
 

@@ -13,7 +13,10 @@ const HumanRessourcesSchema = new Schema({
         type: String,
         valeur: Number
     }]
-  }
+  },
+    dataDate: {
+        type: Date
+    }
 });
 
 module.exports = mongoose.model("HumanRessources", HumanRessourcesSchema);
