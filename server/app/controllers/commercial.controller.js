@@ -8,6 +8,7 @@ module.exports = {
       nbKilometres,
       recetteCommercial,
       nbReclamations,
+      dataDate
     } = req.body;
 
     const newCommercial = new Commercial({
@@ -16,6 +17,7 @@ module.exports = {
       nbKilometres,
       recetteCommercial,
       nbReclamations,
+      dataDate
     });
     await newCommercial.save();
 
@@ -40,7 +42,7 @@ module.exports = {
     if (!commercial) {
       return res.status(404).json({
         success: false,
-        error: "Commercial not found",
+        error: "Commercial entry not found",
       });
     }
 
@@ -59,7 +61,7 @@ module.exports = {
     if (!commercial) {
       return res.status(404).json({
         success: false,
-        error: "Commercial not found",
+        error: "Commercial entry not found",
       });
     }
 
@@ -76,7 +78,7 @@ module.exports = {
     if (!commercial) {
       return res.status(404).json({
         success: false,
-        error: "Commercial not found",
+        error: "Commercial entry not found",
       });
     }
 
