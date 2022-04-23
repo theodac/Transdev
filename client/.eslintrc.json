@@ -24,11 +24,11 @@
   "rules": {
     "react/jsx-filename-extension" : [1, { "extensions": [".jsx", ".js"] }],
     "react/jsx-props-no-spreading" : [0],
-    "react/jsx-indent-props"       : ["error", 2],
-    "semi"                         : ["error", "always"],
-    "quotes"                       : ["error", "double"],
+    "react/jsx-indent-props"       : [1, 1],
+    "semi"                         : ["warning", "always"],
+    "quotes"                       : ["warning", "double"],
     "no-console"                   : 0,
     "no-control-regex"             : 0,
-    "prettier/prettier"            : ["error", { "endOfLine": "auto" }]
+    "prettier/prettier"            : ["warning", { "endOfLine": "auto" }]
   }
 }
