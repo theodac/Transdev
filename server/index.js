@@ -4,6 +4,8 @@ const errorHandler = require("./app/middleware/error.middleware");
 
 const routes = require("./app/routes");
 const { connectDatabase } = require("./app/database");
+const { loadFixtures } = require("./app/fixtures/fixtures")
+
 
 dotenv.config();
 
@@ -20,5 +22,6 @@ const startServer = (port) => {
 
   app.listen(port);
   console.log(`Server started on port ${port}.`);
+  loadFixtures();
 };
 startServer(process.env.PORT || 8080);
