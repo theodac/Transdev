@@ -4,12 +4,12 @@ const buyingController = require("../../controllers/buying.controller");
 
 buying
   .route("/")
-  .post(buyingController.createCommercial)
-  .get(buyingController.getCommercials);
+  .post(buyingController.createBuying)
+  .get(buyingController.getBuyings);
 buying
   .route("/:id")
-  .get(buyingController.createCommercial)
+  .get(buyingController.getBuying)
   .put(buyingController.updateCommercial)
-  .delete(buyingController.deleteCommercial);
+  .delete(buyingController.deleteBuying);
 
 module.exports = buying;

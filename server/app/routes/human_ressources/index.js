@@ -4,12 +4,12 @@ const humanRessourcesController = require("../../controllers/human_ressources.co
 
 humanRessources
   .route("/")
-  .post(humanRessourcesController.createCommercial)
-  .get(humanRessourcesController.getCommercials);
+  .post(humanRessourcesController.createHumanRessources)
+  .get(humanRessourcesController.getHumanRessourcesEntries);
 humanRessources
   .route("/:id")
-  .get(humanRessourcesController.createCommercial)
-  .put(humanRessourcesController.updateCommercial)
-  .delete(humanRessourcesController.deleteCommercial);
+  .get(humanRessourcesController.getHumanRessourcesEntry)
+  .put(humanRessourcesController.updateHumanRessources)
+  .delete(humanRessourcesController.deleteHumanRessources);
 
 module.exports = humanRessources;

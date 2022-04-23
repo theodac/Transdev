@@ -4,12 +4,12 @@ const technicalController = require("../../controllers/technical.controller");
 
 technical
   .route("/")
-  .post(technicalController.createCommercial)
-  .get(technicalController.getCommercials);
+  .post(technicalController.createTechnical)
+  .get(technicalController.getTechnicalEntries);
 technical
   .route("/:id")
-  .get(technicalController.createCommercial)
-  .put(technicalController.updateCommercial)
-  .delete(technicalController.deleteCommercial);
+  .get(technicalController.getTechnicalEntry)
+  .put(technicalController.updateTechnical)
+  .delete(technicalController.deleteTechnical);
 
 module.exports = technical;

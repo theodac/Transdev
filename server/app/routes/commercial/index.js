@@ -8,7 +8,7 @@ commercial
   .get(commercialController.getCommercials);
 commercial
   .route("/:id")
-  .get(commercialController.createCommercial)
+  .get(commercialController.getCommercial)
   .put(commercialController.updateCommercial)
   .delete(commercialController.deleteCommercial);
 

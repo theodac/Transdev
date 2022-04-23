@@ -4,12 +4,12 @@ const qualityEnvironmentController = require("../../controllers/quality_environm
 
 qualityEnvironment
   .route("/")
-  .post(qualityEnvironmentController.createCommercial)
-  .get(qualityEnvironmentController.getCommercials);
+  .post(qualityEnvironmentController.createQualityEnvironment)
+  .get(qualityEnvironmentController.getQualityEnvironmentEntries);
 qualityEnvironment
   .route("/:id")
-  .get(qualityEnvironmentController.createCommercial)
-  .put(qualityEnvironmentController.updateCommercial)
-  .delete(qualityEnvironmentController.deleteCommercial);
+  .get(qualityEnvironmentController.getQualityEnvironmentEntry)
+  .put(qualityEnvironmentController.updateQualityEnvironment)
+  .delete(qualityEnvironmentController.deleteQualityEnvironment);
 
 module.exports = qualityEnvironment;
