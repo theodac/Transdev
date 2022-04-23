@@ -1,4 +1,4 @@
-const HumanRessources = require("../models/humanRessources.model");
+const HumanRessources = require("../models/human_ressources.model");
 
 module.exports = {
   async createHumanRessources(req, res) {

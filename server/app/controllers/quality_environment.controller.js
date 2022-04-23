@@ -1,4 +1,4 @@
-const QualityEnvironment = require("../models/qualityEnvironment.model");
+const QualityEnvironment = require("../models/quality_environment.model");
 
 module.exports = {
   async createQualityEnvironment(req, res) {
