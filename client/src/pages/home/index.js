@@ -4,46 +4,8 @@ import "../../styles/pages/home.scss";
 // import BasicCard from "../../components/basicCard";
 
 const HomePage = () => {
-  function toggleSidebar() {
-    console.log("opening sidebar");
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    this.mini = false;
-  }
-  function sidebarLeave() {
-    console.log("closing sidebar");
-    document.getElementById("mySidebar").style.width = "85px";
-    document.getElementById("main").style.marginLeft = "85px";
-    this.mini = true;
-  }
   return (
     <div className="wrap">
-      <div
-        id="mySidebar"
-        className="sidebar"
-        onMouseEnter={toggleSidebar}
-        onMouseLeave={sidebarLeave}
-      >
-        <a href="#">
-          <i className="material-icons">euro</i>Achat
-        </a>
-        <a href="#">
-          <i className="material-icons">bar_chart</i>Commerciale
-        </a>
-        <a href="#">
-          <i className="material-icons">group</i>R. Humaines
-        </a>
-        <a href="#">
-          <i className="material-icons">settings_suggest</i>Technique
-        </a>
-        <a href="#">
-          <i className="material-icons">local_activity</i>Exploitation
-        </a>
-        <a href="#">
-          <i className="material-icons">eco</i>Environnement
-        </a>
-      </div>
-      <div id="main"></div>
       <div className="right">
         <div className="card green">
           <img src="/img/euros.svg"></img>
