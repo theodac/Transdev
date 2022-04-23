@@ -6,8 +6,9 @@ const Cube = () => {
   function cubeFace(target) {
     const face = target.target.getAttribute("data-face");
     const cube = document.getElementById("cube");
-    cube.classList.remove();
+    cube.className = "";
     cube.classList.add(face);
+    console.log(cube.classList);
   }
   return (
     <div>
