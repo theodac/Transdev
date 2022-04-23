@@ -8,6 +8,7 @@ module.exports = {
       nbKilometres,
       recetteCommercial,
       nbReclamations,
+      dataDate,
     } = req.body;
 
     const newCommercial = new Commercial({
@@ -16,6 +17,7 @@ module.exports = {
       nbKilometres,
       recetteCommercial,
       nbReclamations,
+      dataDate,
     });
     await newCommercial.save();
 
