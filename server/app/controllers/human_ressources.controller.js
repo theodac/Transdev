@@ -1,4 +1,5 @@
 const HumanRessources = require("../models/human_ressources.model");
+const moment = require("moment");
 
 module.exports = {
   async createHumanRessources(req, res) {
@@ -27,11 +28,31 @@ module.exports = {
     });
   },
   async getHumanRessourcesEntries(req, res) {
-    const humanRessources = await HumanRessources.find();
+    let humanRessourcesEntries = [];
+    if (req.body.startDate) {
+      if (req.body.endDate && req.body.endDate !== "") {
+        humanRessourcesEntries = await HumanRessources.find({
+          dataDate: {
+            $gte: moment.utc(req.body.startDate),
+            $lte: moment.utc(req.body.endDate)
+          }
+        })
+      } else {
+        humanRessourcesEntries = await HumanRessources.find({dataDate: moment.utc(req.body.startDate)})
+      }
+    } else 
+    humanRessourcesEntries = await HumanRessources.find();
+    
+    if(!humanRessourcesEntries || humanRessourcesEntries.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: "Human ressources entries not found"
+      })
+    }
 
     res.status(200).json({
       success: true,
-      data: humanRessources,
+      data: humanRessourcesEntries,
     });
   },
   async getHumanRessourcesEntry(req, res) {

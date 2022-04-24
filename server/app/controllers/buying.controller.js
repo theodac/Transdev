@@ -1,4 +1,5 @@
 const Buying = require("../models/buying.model");
+const moment = require("moment");
 
 module.exports = {
   async createBuying(req, res) {
@@ -27,11 +28,31 @@ module.exports = {
     });
   },
   async getBuyings(req, res) {
-    const buying = await Buying.find();
+    let buyingEntries = [];
+    if (req.body.startDate) {
+      if (req.body.endDate && req.body.endDate !== "") {
+        buyingEntries = await Buying.find({
+          dataDate: {
+            $gte: moment.utc(req.body.startDate),
+            $lte: moment.utc(req.body.endDate)
+          }
+        })
+      } else {
+        buyingEntries = await Buying.find({dataDate: moment.utc(req.body.startDate)})
+      }
+    } else 
+    buyingEntries = await Buying.find();
+    
+    if(!buyingEntries || buyingEntries.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: "Buying entries not found"
+      })
+    }
 
     res.status(200).json({
       success: true,
-      data: buying,
+      data: buyingEntries,
     });
   },
   async getBuying(req, res) {

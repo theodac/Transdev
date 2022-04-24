@@ -1,4 +1,5 @@
 const Technical = require("../models/technical.model");
+const moment = require("moment");
 
 module.exports = {
   async createTechnical(req, res) {
@@ -27,11 +28,31 @@ module.exports = {
     });
   },
   async getTechnicalEntries(req, res) {
-    const technical = await Technical.find();
+    let technicalEntries = [];
+    if (req.body.startDate) {
+      if (req.body.endDate && req.body.endDate !== "") {
+        technicalEntries = await Technical.find({
+          dataDate: {
+            $gte: moment.utc(req.body.startDate),
+            $lte: moment.utc(req.body.endDate)
+          }
+        })
+      } else {
+        technicalEntries = await Technical.find({dataDate: moment.utc(req.body.startDate)})
+      }
+    } else 
+    technicalEntries = await Technical.find();
+    
+    if(!technicalEntries || technicalEntries.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: "Exploitation entries not found"
+      })
+    }
 
     res.status(200).json({
       success: true,
-      data: technical,
+      data: technicalEntries,
     });
   },
   async getTechnicalEntry(req, res) {

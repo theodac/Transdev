@@ -11,5 +11,8 @@ commercial
   .get(commercialController.getCommercial)
   .put(commercialController.updateCommercial)
   .delete(commercialController.deleteCommercial);
+// commercial
+//   .route("/test")
+//   .get(commercialController.getCommercialsByDate);
 
 module.exports = commercial;

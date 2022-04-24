@@ -1,5 +1,5 @@
 const Commercial = require("../models/commercial.model");
-const Moment = require("moment");
+const moment = require("moment");
 
 module.exports = {
   async createCommercial(req, res) {
@@ -28,11 +28,31 @@ module.exports = {
     });
   },
   async getCommercials(req, res) {
-    const commercial = await Commercial.find();
+    let commercialEntries = [];
+    if (req.body.startDate) {
+      if (req.body.endDate && req.body.endDate !== "") {
+        commercialEntries = await Commercial.find({
+          dataDate: {
+            $gte: moment.utc(req.body.startDate),
+            $lte: moment.utc(req.body.endDate)
+          }
+        })
+      } else {
+        commercialEntries = await Commercial.find({dataDate: moment.utc(req.body.startDate)})
+      }
+    } else 
+    commercialEntries = await Commercial.find();
+    
+    if(!commercialEntries || commercialEntries.length === 0) {
+      return res.status(404).json({
+        success: false,
+        error: "Commercial entries not found"
+      })
+    }
 
     res.status(200).json({
       success: true,
-      data: commercial,
+      data: commercialEntries,
     });
   },
   async getCommercial(req, res) {
@@ -53,7 +73,9 @@ module.exports = {
     });
   },
   async getCommercialsByDate(req, res) {
-    const { startDate, endDate } = req.params;
+    console.log("ici");
+    const { startDate, endDate } = req.body;
+    console.log(req);
 
     const commercials = []
     if (endDate !== null || endDate !== "") {
