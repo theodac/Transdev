@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Sidebar from "../components/Sidebar";
 import HomePage from "./home";
 import Single from "./home/single";
 import Commerciale from "./home/commerciale";
