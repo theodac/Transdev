@@ -13,11 +13,11 @@ const Link = ({ to, className, children, ...rest }) => {
     if (!internal) {
       return (
         <a
-         href={to}
-         className={className}
-         target={"_blank"}
-         rel={"noopener noreferrer"}
-         {...rest}
+          href={to}
+          className={className}
+          target={"_blank"}
+          rel={"noopener noreferrer"}
+          {...rest}
         >
           {children}
         </a>

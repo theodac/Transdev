@@ -12,42 +12,47 @@ const Sidebar = () => {
 
   const links = [
     {
+      name: "Accueil",
+      icon: "home",
+      path: "/",
+    },
+    {
       name: "Achat",
       icon: "euro",
-      path: "/",
+      path: "/achat",
     },
     {
       name: "Commercial",
       icon: "bar_chart",
-      path: "/",
+      path: "/commerciale",
     },
     {
       name: "R. Humaines",
       icon: "group",
-      path: "/",
+      path: "/ressources_humaines",
     },
     {
       name: "Technique",
       icon: "settings_suggest",
-      path: "/",
+      path: "/technique",
     },
     {
       name: "Exploitation",
       icon: "local_activity",
-      path: "/",
+      path: "/exploitation",
     },
     {
       name: "Environnement",
       icon: "eco",
-      path: "/",
+      path: "/environnement",
     },
   ];
 
   return (
     <div
-      className={`sidebar${opened ? " opened" : ""}`}
-      onMouseEnter={toggleSidebar}
-      onMouseLeave={toggleSidebar}
+     className={`sidebar ${opened ? "opened" : ""}`}
+     onMouseEnter={toggleSidebar}
+     onMouseLeave={toggleSidebar}
     >
       {links.map(({ name, icon, path }, index) => (
         <Link key={index} to={path}>

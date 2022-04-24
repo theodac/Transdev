@@ -2,7 +2,7 @@
   height: 100%;
   width: 85px;
   position: fixed;
-  z-index: 200;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #fff;
@@ -10,53 +10,44 @@
   overflow-x: hidden;
   padding-top: 60px;
   white-space: nowrap;
-  -webkit-box-shadow: 20px 10px 13px -14px rgba(10, 10, 10, 0.05);
-  box-shadow: 20px 10px 13px -14px rgba(10, 10, 10, 0.05);
+  -webkit-box-shadow: 20px 10px 13px -14px rgba(10,10,10,0.05); 
+  box-shadow: 20px 10px 13px -14px rgba(10,10,10,0.05);
 
-  &:hover {
+  &.opened {
     width: 250px;
   }
-}
 
-.sidebar a {
-  padding: 48px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #818181;
-  display: block;
-  transition: all .6s;
-}
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #818181;
+    display: block;
+    transition: all .6s;
 
-.sidebar a:hover {
-  color: #333;
-  transition: all .6s;
-  background-color: rgba(255, 255, 255, 0.204);
+    &:hover {
+      color: #333;
+      transition: all .6s;
+      background-color: rgba(255, 255, 255, 0.204);
+    }
+  }
 }
-
-main .sidebar {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 1.5rem;
-  margin-left: 50px;
-}
-main
 
 .material-icons,
 .icon-text {
-  vertical-align: middle;
+ vertical-align: middle;
 }
 
 .material-icons {
-  padding-bottom: 3px;
-  margin-right: 2rem;
+ padding-bottom: 3px;
+ margin-right: 2rem;
 }
 
 @media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
+ .sidebar {
+   padding-top: 15px;
+ }
+ .sidebar a {
+   font-size: 18px;
+ }
 }

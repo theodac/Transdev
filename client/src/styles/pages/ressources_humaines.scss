@@ -10,7 +10,7 @@
 
 }
 
-#commerciale {
+#ressources_humaines {
   .wrap_single {
     display: flex;
     margin: 0 auto;
@@ -23,24 +23,50 @@
     padding: 1rem;
     gap: 5px;
     text-align: center;
-
-    p {
-      color: var(--gris);
+  
+    p.achat {
+      text-transform: uppercase;
+       position: absolute;
+       top: -40%;
+       left: 25%;
+     }
+    p.technique {
+      position: absolute;
+      top: 50%;
+      left: -200px;
     }
-
+  
+    p.exploitation {
+      position: absolute;
+      top: 50%;
+      left: 270px;
+    }
+  
+    p.commerciale {
+      position: absolute;
+      top: -40%;
+      left: 25%;
+    }
+  
+    p.environnement {
+      position: absolute;
+      bottom: -31%;
+      left: 14%;
+    }
+  
   }
-
+  
   .wrap_single h2 {
     font-size: 1rem;
     text-transform: uppercase;
-    color: $color_pink_2;
+    color: $color_green_10;
   }
   .wrap_single p {
    font-size: .7rem;
-   color: $color_pink_2;
+   color: $color_green_10;
  }
-
-
+  
+  
   .wrap_single>div {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -49,148 +75,134 @@
 
   .icon {
     font-size: 4rem;
-    color: $color_pink_2;
+    color: $color_green_10;
    }
-
+  
   .cude_2d_1 {
     width: 200px;
     height: 200px;
-    background: #81450A;
+    background: $color_green_5;
   }
-
+  
   .cude_2d_2 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_top {
+    .arrow_top::before {
+      content: ">>";
       position: absolute;
-      top: -40%;
-      left: 40%;
-
-
-      
-      .icon {
-        transform: rotate(-90deg);
-        font-weight: 100;
-        font-size: 42px;
-        color: #C77A8C;
-      }
+      top: -126px;
+      left: 33%;
+      transform: rotate(268deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: #C77A8C;
     }
-
-
+  
+  
   }
-
+  
   .cude_2d_3 {
     width: 200px;
     height: 200px;
-    background: #B66B13;
+    background: $color_green_11;
   }
-
+  
   .cude_2d_4 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_left {
+    .arrow_left::before {
+      content: ">>";
       position: absolute;
       bottom: 38px;
-      left: -40%;
-
-      
-      .icon {
-        transform: rotate(180deg);
-        font-weight: 100;
-        font-size: 42px;
-        color: #C77A8C;
-      }
+      left: -125%;
+      transform: rotate(179deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: #9885B2;
     }
   }
-
+  
   .cude_2d_5 {
     display: flex;
     width: 200px;
     height: 200px;
-    background: #FEDC63;
+    background: $color_green_4;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
   }
-
+  
   .cude_2d_6 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_right {
+    .arrow_right::before {
+      content: ">>";
       position: absolute;
       bottom: 46px;
-      right: -40%;
-      
-      .icon {
-        font-weight: 100;
-        font-size: 42px;
-        color: #C77A8C;
-      }
+      right: -107%;
+      transform: rotate(359deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: red;
     }
-
+  
   }
-
+  
   .cude_2d_7 {
     width: 200px;
     height: 200px;
-    background: #E5AF2F;
+    background: $color_green_8;
   }
-
+  
   .cude_2d_8 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_down {
+    .arrow_down::before {
+      content: ">>";
       position: absolute;
-      bottom: -40%;
-      left: 20%;
-  
-      .ressources {
-        margin-top: -20px;
-      }
-      
-      .icon {
-        transform: rotate(90deg);
-        font-weight: 100;
-        font-size: 42px;
-        color: #C77A8C;
-      }
+      bottom: -120px;
+      left: 40%;
+      transform: rotate(89deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: red;
     }
-
+  
   }
-
+  
   .cude_2d_9 {
     width: 200px;
     height: 200px;
-    background: #FBCE43;
+    background: $color_green_5;
   }
-
+  
   .text_damier {
     max-height: 60px;
   }
-
+  
   p.number {
     font-weight: bold;
     font-size: 1rem;
     color: grey;
   }
-
-
+  
+  
   .technique,
   .commerciale,
   .exploitation,
   .ressources {
     text-transform: uppercase;
   }
-
+  
   .btn-voir {
     cursor: pointer;
     background: #094F66;
@@ -217,7 +229,7 @@
     font-weight: bold;
   }
   @media (max-width: 800px) {
-
+  
     .cude_2d_1, .cude_2d_3 , .cude_2d_5, .cude_2d_7, .cude_2d_9 {
       display: none;
     }
@@ -228,7 +240,7 @@
       flex-direction: column;
       align-items: center;
     }
-
-
+  
+  
   }
 }
