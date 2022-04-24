@@ -1,19 +1,20 @@
 import React from "react";
-import "../../styles/pages/single.scss";
+import "../../styles/pages/achat.scss";
 
-const Single = () => {
+
+const Achat = () => {
 
 
     return (
 
-        <>
+        <div id="achat">
 
-            <div id="single">
-            <div className="wrap_single" >
+
+            <div className="wrap_single">
                 <div className="cube1"></div>
                 <div className="cube2">
                     <div className="arrow_top"></div>
-                    <p className="commerciale">Commerciale</p>
+                    <p className="commerciale">Achat</p>
                     <h2>commande passées</h2>
                     <p className="number">148 634</p>
                     <button className="btn-voir">en voir plus...</button>
@@ -52,9 +53,8 @@ const Single = () => {
 
             </div>
         </div>
-        </>
 
     );
 };
 
-export default Single;
+export default Achat;

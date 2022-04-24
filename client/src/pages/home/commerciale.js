@@ -1,15 +1,16 @@
 import React from "react";
-import "../../styles/pages/single.scss";
+import "../../styles/pages/commerciale.scss";
 
-const Single = () => {
+
+const Commerciale = () => {
 
 
     return (
 
-        <>
+        <div id="commerciale">
 
-            <div id="single">
-            <div className="wrap_single" >
+        
+            <div className="wrap_single">
                 <div className="cube1"></div>
                 <div className="cube2">
                     <div className="arrow_top"></div>
@@ -52,9 +53,8 @@ const Single = () => {
 
             </div>
         </div>
-        </>
 
     );
 };
 
-export default Single;
+export default Commerciale;

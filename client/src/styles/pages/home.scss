@@ -18,9 +18,9 @@
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  padding: 48px 8px 8px 32px;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #818181;
   display: block;
   transition: all .6s;
@@ -39,6 +39,7 @@ main .sidebar {
   font-size: 1.5rem;
   margin-left: 50px;
 }
+main
 
 .material-icons,
 .icon-text {
@@ -256,6 +257,15 @@ main .sidebar {
 .jaune {
   color: #e5ae2f!important;
 }
+
+.sidebar_bg_vert {
+ 
+  background: rgba(61, 212, 71, 0.04);
+  
+}
+
+
+
 
 @media screen and (max-width: 1000px) {
   .wrap .right .card {
