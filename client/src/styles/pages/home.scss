@@ -20,7 +20,7 @@
 .sidebar a {
   padding: 48px 8px 8px 32px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: .8rem;
   color: #818181;
   display: block;
   transition: all .6s;
@@ -32,14 +32,14 @@
   background-color: rgba(255, 255, 255, 0.204);
 }
 
-main .sidebar {
+#main .sidebar {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 1.5rem;
   margin-left: 50px;
 }
-main
+
 
 .material-icons,
 .icon-text {
@@ -52,16 +52,15 @@ main
 }
 
 #main {
-  padding: 16px;
-  margin-left: 85px;
+  margin-left: -86px;
   transition: margin-left 0.5s;
+  background-color: rgba(0, 128, 0, 0.092);
+
 }
 
 @media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
   .sidebar a {
+   
     font-size: 18px;
   }
 }
@@ -263,7 +262,21 @@ main
   background: rgba(61, 212, 71, 0.04);
   
 }
+.rightBar {
 
+  height: 100vh;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    margin-bottom:3.4rem;
+    color: black;
+    font-size: 1.1rem;
+    padding: 0 2rem;
+  }
+ }
 
 
 
@@ -288,6 +301,7 @@ main
   }
 
   #main {
+    display: none;
     padding: 16px;
     margin-left: 40px;
     transition: margin-left 0.5s;
