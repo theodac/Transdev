@@ -20,6 +20,8 @@ module.exports = {
     });
     await newCommercial.save();
 
+    if (!res)
+      return;
     res.status(201).json({
       success: true,
       data: newCommercial,

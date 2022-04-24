@@ -19,6 +19,8 @@ module.exports = {
     });
     await newQualityEnvironment.save();
 
+    if (!res)
+      return;
     res.status(201).json({
       success: true,
       data: newQualityEnvironment,

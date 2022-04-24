@@ -19,6 +19,8 @@ module.exports = {
     });
     await newHumanRessources.save();
 
+    if (!res)
+      return;
     res.status(201).json({
       success: true,
       data: newHumanRessources,
