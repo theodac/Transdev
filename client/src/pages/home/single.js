@@ -22,7 +22,7 @@ const Single = () => {
             <div className="text_damier">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipising elit.
-                consectetur adipising elit.{" "}
+                consectetur adipising elit.
               </p>
               <button className="btn-voir">en voir plus...</button>
             </div>
@@ -37,7 +37,7 @@ const Single = () => {
             <h2>Statistiques 2</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipising elit.
-              consectetur adipising elit.{" "}
+              consectetur adipising elit.
             </p>
             <button className="btn-voir">en voir plus...</button>
           </div>
@@ -48,7 +48,7 @@ const Single = () => {
             <h2>Statistiques 2</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipising elit.
-              consectetur adipising elit.{" "}
+              consectetur adipising elit.
             </p>
             <button className="btn-voir">en voir plus...</button>
           </div>
