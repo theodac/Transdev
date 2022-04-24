@@ -9,7 +9,7 @@ const QualityEnvironmentSchema = new Schema({
     type: Number
   },
   incidentsEnvironnementaux: {
-    type: String
+    type: Number
   },
   budgetEnvironnement: {
     type: Number
