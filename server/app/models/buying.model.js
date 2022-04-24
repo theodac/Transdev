@@ -2,29 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const BuyingSchema = new Schema({
-  nbCommandesPassees: {
-    type: [{
-        secteur: String,
-        valeur: Number
-      }]
-  },
-  nbCreationNouveauxFournisseurs: {
-    type: [{
-        secteur: String,
-        valeur: Number
-      }]
-  },
-  tauxAchatsFournisseursLocauxMetropole: {
+  nbTicketsVendus: {
     type: Number
   },
-  tauxAchatsFournisseursLocauxNormandie: {
+  nbTotal: {
     type: Number
   },
-  tauxAchatsFournisseursLocauxAutre: {
+  nbTicketsSMS: {
     type: Number
   },
-  tauxFournisseursCertifISO: {
-    type: Number
+  ventePopulaire: {
+    type: String
   },
   dataDate: {
     type: Date

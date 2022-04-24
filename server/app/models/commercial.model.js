@@ -5,37 +5,14 @@ const CommercialSchema = new Schema({
   recetteGlobale: {
     type: Number,
   },
-  nbVentes: {
-    type: [
-      {
-        label: String,
-        value: Number,
-      },
-    ],
+  nbNouveauxAbonnements: {
+    type: Number
   },
-  nbKilometres: {
-    type: [
-      {
-        label: String,
-        value: Number,
-      },
-    ],
-  },
-  recetteCommercial: {
-    type: [
-      {
-        label: String,
-        value: Number,
-      },
-    ],
+  nbNouveauxPartenaires: {
+    type: Number,
   },
   nbReclamations: {
-    type: [
-      {
-        label: String,
-        value: Number,
-      },
-    ],
+    type: Number
   },
   dataDate: {
     type: Date

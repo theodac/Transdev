@@ -2,16 +2,16 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const QualityEnvironmentSchema = new Schema({
-  nbSituationsInacceptables: {
+  nbSignalementsQualiteEnvironement: {
     type: Number
   },
-  nbSituationsInacceptablesAvecEvo: {
+  impactCarbone: {
     type: Number
   },
-  communicationsCritereProprete: {
+  incidentsEnvironnementaux: {
     type: String
   },
-  nbSignalementsNonRespectesPqe: {
+  budgetEnvironnement: {
     type: Number
   },
   dataDate: {

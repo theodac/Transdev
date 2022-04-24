@@ -2,45 +2,18 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const TechnicalSchema = new Schema({
-  pannesLignesAuxDixMillesKms: {
-    type: Number
-  },
-  pannesLignesBusEtTeor: {
-    type: Number
-  },
-  pannesLignesTram: {
-    type: Number
-  },
-  kmsPerdus: {
-    type: [{
-        cause: String,
-        valeur: Number
-    }]
-  },
-  kmsPerdusBusEtTeor: {
-    type: [{
-        cause: String,
-        valeur: Number
-    }]
-  },
-  kmsPerdusTram: {
-    type: [{
-        cause: String,
-        valeur: Number
-    }]
-  },
-  consommationAuxCentsKmsGlobal: {
+    tauxPannesBusEtTeor: {
       type: Number
-  },
-  consommationAuxCentsKmsBusEtTeor: {
-    type: Number
     },
-  consommationAuxCentsKmsTram: {
-    type: Number
-  },
-  etatDuParc: {
-      type: String
-  },
+    consommationBusEtTeorAuxCentsKms: {
+      type: Number
+    },
+    consommationTramAuxCentsKms: {
+      type: Number
+    },
+    tauxPannesTram: {
+      type: Number
+    },
     dataDate: {
         type: Date
     }

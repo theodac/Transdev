@@ -3,16 +3,16 @@ const Schema = mongoose.Schema;
 
 const HumanRessourcesSchema = new Schema({
   tauxAbsenteisme: {
-    type: [{
-        raison: String,
-        taux: Number
-    }]
+    type: Number
   },
-  tauxFormation: {
-    type: [{
-        type: String,
-        valeur: Number
-    }]
+  tauxGreve: {
+    type: Number
+  },
+  tauxRecrutement: {
+    type: Number
+  },
+  tauxTurnOver: {
+    type: Number
   },
     dataDate: {
         type: Date
