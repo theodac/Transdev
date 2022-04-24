@@ -38,51 +38,45 @@ const HomePage = () => {
       >
         <a
           href="#"
-          className="vert"
           onMouseEnter={() => hoverCard("CardGreen")}
           onMouseLeave={() => leaveCard("CardGreen")}
         >
-          <i className="material-icons">euro</i>Achat
+          <i className="material-icons vert">euro</i>Achat
         </a>
         <a
           href="#"
-          className="jaune"
           onMouseEnter={() => hoverCard("CardYellow")}
           onMouseLeave={() => leaveCard("CardYellow")}
         >
-          <i className="material-icons">bar_chart</i>Commerciale
+          <i className="material-icons jaune">bar_chart</i>Commerciale
         </a>
         <a
           href="#"
-          className="rose"
           onMouseEnter={() => hoverCard("CardPurple")}
           onMouseLeave={() => leaveCard("CardPurple")}
         >
-          <i className="material-icons">group</i>R. Humaines
+          <i className="material-icons rose">group</i>R. Humaines
         </a>
         <a
           href="#"
-          className="orange"
           onMouseEnter={() => hoverCard("CardOrange")}
           onMouseLeave={() => leaveCard("CardOrange")}
         >
-          <i className="material-icons">settings_suggest</i>Technique
+          <i className="material-icons orange">settings_suggest</i>Technique
         </a>
         <a
           href="#"
-          className="bleu"
           onMouseEnter={() => hoverCard("CardBleu")}
           onMouseLeave={() => leaveCard("CardBleu")}
         >
-          <i className="material-icons">local_activity</i>Exploitation
+          <i className="material-icons bleu">local_activity</i>Exploitation
         </a>
         <a
           href="#"
-          className="vert"
           onMouseEnter={() => hoverCard("CardGreenLight")}
           onMouseLeave={() => leaveCard("CardGreenLight")}
         >
-          <i className="material-icons">eco</i>Environnement
+          <i className="material-icons vert">eco</i>Environnement
         </a>
       </div>
       <div id="main"></div>
