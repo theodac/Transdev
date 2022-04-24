@@ -25,10 +25,10 @@
     "react/jsx-filename-extension" : [1, { "extensions": [".jsx", ".js"] }],
     "react/jsx-props-no-spreading" : [0],
     "react/jsx-indent-props"       : [1, 1],
-    "semi"                         : ["warning", "always"],
-    "quotes"                       : ["warning", "double"],
+    "semi"                         : [1, "always"],
+    "quotes"                       : [1, "double"],
     "no-console"                   : 0,
     "no-control-regex"             : 0,
-    "prettier/prettier"            : ["warning", { "endOfLine": "auto" }]
+    "prettier/prettier"            : [1, { "endOfLine": "auto" }]
   }
 }
