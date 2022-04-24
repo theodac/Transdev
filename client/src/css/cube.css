@@ -139,7 +139,92 @@ a {
   color: #0C5B53;
 }
 
+#cube .cart {
+  text-align: center;
+  flex: 1 0 32.9%;
+  border: 1px solid #000;
+  min-height: 33%;
+}
+
+#cube h2 {
+  color: #094F66;
+  font-size: .8em;
+}
+
+#cube .cube1 {
+  background: #ACC1B8;
+}
+
+#cube .cube2 {
+  background: #F8F8F8;
+}
+
+#cube .cube3 {
+  background: #58716E;
+}
+
+#cube .cube4 {
+  background: #F8F8F8;
+}
+
+#cube .cube5 {
+  display: flex;
+  background: #DBE5CA;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#cube .cube6 {
+  background: #F8F8F8;
+}
+
+#cube .cube7 {
+  background: #668961;
+}
+
+#cube .cube8 {
+  background: #F8F8F8;
+}
+
+#cube .cube9 {
+  background: #ABC69D;
+}
+
+#cube .text_damier {
+  max-height: 60px;
+}
+
+#cube .number {
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 1rem;
+  color: grey;
+}
+
+#cube .technique,
+#cube .commerciale,
+#cube .exploitation,
+#cube .ressources {
+  text-align: center;
+  color: #222;
+  text-transform: uppercase;
+}
+
+#cube .btn-voir {
+  background: #094F66;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 7px;
+  font-weight: bold;
+}
+
 #cube .front {
+  flex-flow: row wrap;
   background: #AEDCB7;
   transform: rotateY(0deg) translateZ(250px);
 }
