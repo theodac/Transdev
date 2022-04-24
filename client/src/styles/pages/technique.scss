@@ -79,13 +79,13 @@
     color: $color_orange_3;
    }
 
-  .cube1 {
+  .cude_2d_1 {
     width: 200px;
     height: 200px;
     background: $color_yellow_5;
   }
 
-  .cube2 {
+  .cude_2d_2 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
@@ -104,13 +104,13 @@
 
   }
 
-  .cube3 {
+  .cude_2d_3 {
     width: 200px;
     height: 200px;
     background: $color_orange_3;
   }
 
-  .cube4 {
+  .cude_2d_4 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
@@ -127,7 +127,7 @@
     }
   }
 
-  .cube5 {
+  .cude_2d_5 {
     display: flex;
     width: 200px;
     height: 200px;
@@ -138,7 +138,7 @@
     align-items: center;
   }
 
-  .cube6 {
+  .cude_2d_6 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
@@ -156,13 +156,13 @@
 
   }
 
-  .cube7 {
+  .cude_2d_7 {
     width: 200px;
     height: 200px;
     background: #E5AF2F;
   }
 
-  .cube8 {
+  .cude_2d_8 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
@@ -180,7 +180,7 @@
 
   }
 
-  .cube9 {
+  .cude_2d_9 {
     width: 200px;
     height: 200px;
     background: $color_red_1;
@@ -231,7 +231,7 @@
   }
   @media (max-width: 800px) {
 
-    .cube1, .cube3 , .cube5, .cube7, .cube9 {
+    .cude_2d_1, .cude_2d_3 , .cude_2d_5, .cude_2d_7, .cude_2d_9 {
       display: none;
     }
     .technique, .exploitation, .commerciale, .ressources, .arrow_down::before, .arrow_left::before, .arrow_right::before, .arrow_top::before {

@@ -27,33 +27,6 @@
     p {
       color: var(--gris);
     }
-    p.exploitation {
-     text-transform: uppercase;
-      position: absolute;
-      top: 50%;
-      left: -200px;
-    }
-
-    p.technique {
-     text-transform: uppercase;
-      position: absolute;
-      top: 50%;
-      left: 270px;
-    }
-
-    p.commerciale {
-     text-transform: uppercase;
-      position: absolute;
-      top: -40%;
-      left: 25%;
-    }
-
-    p.ressources {
-     text-transform: uppercase;
-      position: absolute;
-      bottom: -31%;
-      left: 14%;
-    }
 
   }
 
@@ -79,55 +52,61 @@
     color: $color_green_11;
    }
 
-  .cube1 {
+  .cude_2d_1 {
     width: 200px;
     height: 200px;
     background: $color_green_10;
   }
 
-  .cube2 {
+  .cude_2d_2 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_top::before {
-      content: ">>";
+    .arrow_top {
       position: absolute;
-      top: -126px;
-      left: 33%;
-      transform: rotate(268deg);
-      font-weight: bold;
-      font-size: 42px;
-      color: #E5AF2F;
+      top: -40%;
+      left: 40%;
+
+      
+      .icon {
+        transform: rotate(-90deg);
+        font-weight: 100;
+        font-size: 42px;
+        color: #C77A8C;
+      }
     }
 
 
   }
 
-  .cube3 {
+  .cude_2d_3 {
     width: 200px;
     height: 200px;
     background: $color_green_11;
   }
 
-  .cube4 {
+  .cude_2d_4 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_left::before {
-      content: ">>";
+    .arrow_left {
       position: absolute;
       bottom: 38px;
-      left: -125%;
-      transform: rotate(179deg);
-      font-weight: bold;
-      font-size: 42px;
-      color: #E5AF2F;
+      left: -40%;
+
+      
+      .icon {
+        transform: rotate(180deg);
+        font-weight: 100;
+        font-size: 42px;
+        color: #C77A8C;
+      }
     }
   }
 
-  .cube5 {
+  .cude_2d_5 {
     display: flex;
     width: 200px;
     height: 200px;
@@ -138,49 +117,56 @@
     align-items: center;
   }
 
-  .cube6 {
+  .cude_2d_6 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_right::before {
-      content: ">>";
+    .arrow_right {
       position: absolute;
       bottom: 46px;
-      right: -107%;
-      transform: rotate(359deg);
-      font-weight: bold;
-      font-size: 42px;
-      color: #E5AF2F;
+      right: -40%;
+      
+      .icon {
+        font-weight: 100;
+        font-size: 42px;
+        color: #C77A8C;
+      }
     }
 
   }
 
-  .cube7 {
+  .cude_2d_7 {
     width: 200px;
     height: 200px;
     background: $color_green_7;
   }
 
-  .cube8 {
+  .cude_2d_8 {
     width: 200px;
     height: 200px;
     background: #F8F8F8;
     position: relative;
-    .arrow_down::before {
-      content: ">>";
+    .arrow_down {
       position: absolute;
-      bottom: -120px;
-      left: 40%;
-      transform: rotate(89deg);
-      font-weight: bold;
-      font-size: 42px;
-      color: #E5AF2F;
+      bottom: -40%;
+      left: 20%;
+  
+      .ressources {
+        margin-top: -20px;
+      }
+      
+      .icon {
+        transform: rotate(90deg);
+        font-weight: 100;
+        font-size: 42px;
+        color: #C77A8C;
+      }
     }
 
   }
 
-  .cube9 {
+  .cude_2d_9 {
     width: 200px;
     height: 200px;
     background: $color_green_5;
@@ -231,7 +217,7 @@
   }
   @media (max-width: 800px) {
 
-    .cube1, .cube3 , .cube5, .cube7, .cube9 {
+    .cude_2d_1, .cude_2d_3 , .cude_2d_5, .cude_2d_7, .cude_2d_9 {
       display: none;
     }
     .technique, .exploitation, .commerciale, .ressources, .arrow_down::before, .arrow_left::before, .arrow_right::before, .arrow_top::before {
