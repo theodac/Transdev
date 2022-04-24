@@ -29,16 +29,16 @@ module.exports = {
   },
   async getQualityEnvironmentEntries(req, res) {
     let qualityEnvironmentEntries = [];
-    if (req.body.startDate) {
-      if (req.body.endDate && req.body.endDate !== "") {
+    if (req.query.startDate) {
+      if (req.query.endDate && req.query.endDate !== "") {
         qualityEnvironmentEntries = await QualityEnvironment.find({
           dataDate: {
-            $gte: moment.utc(req.body.startDate),
-            $lte: moment.utc(req.body.endDate)
+            $gte: moment.utc(req.query.startDate),
+            $lte: moment.utc(req.query.endDate)
           }
         })
       } else {
-        qualityEnvironmentEntries = await QualityEnvironment.find({dataDate: moment.utc(req.body.startDate)})
+        qualityEnvironmentEntries = await QualityEnvironment.find({dataDate: moment.utc(req.query.startDate)})
       }
     } else 
     qualityEnvironmentEntries = await QualityEnvironment.find();

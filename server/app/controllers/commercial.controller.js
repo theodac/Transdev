@@ -29,16 +29,16 @@ module.exports = {
   },
   async getCommercials(req, res) {
     let commercialEntries = [];
-    if (req.body.startDate) {
-      if (req.body.endDate && req.body.endDate !== "") {
+    if (req.query.startDate) {
+      if (req.query.endDate && req.query.endDate !== "") {
         commercialEntries = await Commercial.find({
           dataDate: {
-            $gte: moment.utc(req.body.startDate),
-            $lte: moment.utc(req.body.endDate)
+            $gte: moment.utc(req.query.startDate),
+            $lte: moment.utc(req.query.endDate)
           }
         })
       } else {
-        commercialEntries = await Commercial.find({dataDate: moment.utc(req.body.startDate)})
+        commercialEntries = await Commercial.find({dataDate: moment.utc(req.query.startDate)})
       }
     } else 
     commercialEntries = await Commercial.find();

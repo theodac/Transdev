@@ -29,16 +29,16 @@ module.exports = {
   },
   async getHumanRessourcesEntries(req, res) {
     let humanRessourcesEntries = [];
-    if (req.body.startDate) {
-      if (req.body.endDate && req.body.endDate !== "") {
+    if (req.query.startDate) {
+      if (req.query.endDate && req.query.endDate !== "") {
         humanRessourcesEntries = await HumanRessources.find({
           dataDate: {
-            $gte: moment.utc(req.body.startDate),
-            $lte: moment.utc(req.body.endDate)
+            $gte: moment.utc(req.query.startDate),
+            $lte: moment.utc(req.query.endDate)
           }
         })
       } else {
-        humanRessourcesEntries = await HumanRessources.find({dataDate: moment.utc(req.body.startDate)})
+        humanRessourcesEntries = await HumanRessources.find({dataDate: moment.utc(req.query.startDate)})
       }
     } else 
     humanRessourcesEntries = await HumanRessources.find();

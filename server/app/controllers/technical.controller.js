@@ -29,16 +29,16 @@ module.exports = {
   },
   async getTechnicalEntries(req, res) {
     let technicalEntries = [];
-    if (req.body.startDate) {
-      if (req.body.endDate && req.body.endDate !== "") {
+    if (req.query.startDate) {
+      if (req.query.endDate && req.query.endDate !== "") {
         technicalEntries = await Technical.find({
           dataDate: {
-            $gte: moment.utc(req.body.startDate),
-            $lte: moment.utc(req.body.endDate)
+            $gte: moment.utc(req.query.startDate),
+            $lte: moment.utc(req.query.endDate)
           }
         })
       } else {
-        technicalEntries = await Technical.find({dataDate: moment.utc(req.body.startDate)})
+        technicalEntries = await Technical.find({dataDate: moment.utc(req.query.startDate)})
       }
     } else 
     technicalEntries = await Technical.find();
