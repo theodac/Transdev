@@ -3,19 +3,19 @@ const Technical = require("../models/technical.model");
 module.exports = {
   async createTechnical(req, res) {
     const {
-      nbSituationsInacceptables, 
-      nbSituationsInacceptableAvecEvo, 
-      communicationsCritereProperte, 
-      nbSignalementsNonRespectesPqe,
-      dataDate
+        tauxPannesBusEtTeor,
+        consommationBusEtTeorAuxCentsKms,
+        consommationTramAuxCentsKms,
+        tauxPannesTram,
+        dataDate
     } = req.body;
 
     const newTechnical = new Technical({
-      nbSituationsInacceptables, 
-      nbSituationsInacceptableAvecEvo, 
-      communicationsCritereProperte, 
-      nbSignalementsNonRespectesPqe,
-      dataDate
+        tauxPannesBusEtTeor,
+        consommationBusEtTeorAuxCentsKms,
+        consommationTramAuxCentsKms,
+        tauxPannesTram,
+        dataDate
     });
     await newTechnical.save();
 

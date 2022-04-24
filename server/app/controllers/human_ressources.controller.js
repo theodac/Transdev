@@ -3,14 +3,18 @@ const HumanRessources = require("../models/human_ressources.model");
 module.exports = {
   async createHumanRessources(req, res) {
     const {
-      tauxAbsenteisme, 
-      tauxFormation, 
+      tauxAbsenteisme,
+      tauxGreve,
+      tauxRecrutement,
+      tauxTurnOver,
       dataDate
     } = req.body;
 
     const newHumanRessources = new HumanRessources({
-      tauxAbsenteisme, 
-      tauxFormation, 
+      tauxAbsenteisme,
+      tauxGreve,
+      tauxRecrutement,
+      tauxTurnOver,
       dataDate
     });
     await newHumanRessources.save();

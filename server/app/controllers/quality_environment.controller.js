@@ -3,18 +3,18 @@ const QualityEnvironment = require("../models/quality_environment.model");
 module.exports = {
   async createQualityEnvironment(req, res) {
     const {
-      nbSituationsInacceptables, 
-      nbSituationsInacceptableAvecEvo, 
-      communicationsCritereProperte, 
-      nbSignalementsNonRespectesPqe,
+      nbSignalementsQualiteEnvironement,
+      impactCarbone,
+      incidentsEnvironnementaux,
+      budgetEnvironnement,
       dataDate
     } = req.body;
 
     const newQualityEnvironment = new QualityEnvironment({
-      nbSituationsInacceptables, 
-      nbSituationsInacceptableAvecEvo, 
-      communicationsCritereProperte, 
-      nbSignalementsNonRespectesPqe,
+      nbSignalementsQualiteEnvironement,
+      impactCarbone,
+      incidentsEnvironnementaux,
+      budgetEnvironnement,
       dataDate
     });
     await newQualityEnvironment.save();

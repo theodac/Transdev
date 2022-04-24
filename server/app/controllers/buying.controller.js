@@ -3,22 +3,18 @@ const Buying = require("../models/buying.model");
 module.exports = {
   async createBuying(req, res) {
     const {
-      nbCommandesPassees,
-      nbCreationNouveauxFournisseurs,
-      tauxAchatsFournisseursLocauxMetropole,
-      tauxAchatsFournisseursLocauxNormandie,
-      tauxAchatsFournisseursLocauxAutre,
-      tauxFournisseursCertifISO,
+      nbTicketsVendus,
+      nbTotal,
+      nbTicketsSMS,
+      ventePopulaire,
       dataDate,
     } = req.body;
 
     const newBuying = new Buying({
-      nbCommandesPassees,
-      nbCreationNouveauxFournisseurs,
-      tauxAchatsFournisseursLocauxMetropole,
-      tauxAchatsFournisseursLocauxNormandie,
-      tauxAchatsFournisseursLocauxAutre,
-      tauxFournisseursCertifISO,
+      nbTicketsVendus,
+      nbTotal,
+      nbTicketsSMS,
+      ventePopulaire,
       dataDate,
     });
     await newBuying.save();

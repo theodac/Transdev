@@ -5,18 +5,16 @@ module.exports = {
   async createCommercial(req, res) {
     const {
       recetteGlobale,
-      nbVentes,
-      nbKilometres,
-      recetteCommercial,
+      nbNouveauxAbonnements,
+      nbNouveauxPartenaires,
       nbReclamations,
       dataDate
     } = req.body;
 
     const newCommercial = new Commercial({
       recetteGlobale,
-      nbVentes,
-      nbKilometres,
-      recetteCommercial,
+      nbNouveauxAbonnements,
+      nbNouveauxPartenaires,
       nbReclamations,
       dataDate
     });
