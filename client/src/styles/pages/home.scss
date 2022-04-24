@@ -1,10 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+.sidebar {
+  height: 100%;
+  width: 85px;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: nowrap;
+  -webkit-box-shadow: 20px 10px 13px -14px rgba(10, 10, 10, 0.05);
+  box-shadow: 20px 10px 13px -14px rgba(10, 10, 10, 0.05);
+}
+
+.sidebar a {
+  padding: 48px 8px 8px 32px;
+  text-decoration: none;
+  font-size: .8rem;
+  color: #818181;
+  display: block;
+  transition: all .6s;
+}
+
+.sidebar a:hover {
+  color: #333;
+  transition: all .6s;
+  background-color: rgba(255, 255, 255, 0.204);
+}
+
+#main .sidebar {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 1.5rem;
+  margin-left: 50px;
+}
+
+
+.material-icons,
+.icon-text {
+  vertical-align: middle;
+}
+
+.material-icons {
+  padding-bottom: 3px;
+  margin-right: 2rem;
+}
+
 #main {
-  padding: 16px;
-  margin-left: 85px;
+  margin-left: -86px;
   transition: margin-left 0.5s;
+  background-color: rgba(0, 128, 0, 0.092);
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar a {
+   
+    font-size: 18px;
+  }
 }
 
 .wrap {
@@ -214,7 +272,21 @@
   background: rgba(61, 212, 71, 0.04);
   
 }
+.rightBar {
 
+  height: 100vh;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    margin-bottom:3.4rem;
+    color: black;
+    font-size: 1.1rem;
+    padding: 0 2rem;
+  }
+ }
 
 
 
@@ -239,6 +311,7 @@
   }
 
   #main {
+    display: none;
     padding: 16px;
     margin-left: 40px;
     transition: margin-left 0.5s;
