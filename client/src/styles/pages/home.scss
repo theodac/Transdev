@@ -1,69 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');   
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');   
-   .sidebar {
-     height: 100%;
-     width: 85px;
-     position: fixed;
-     z-index: 1;
-     top: 0;
-     left: 0;
-     background-color: #fff;
-     transition: 0.5s;
-     overflow-x: hidden;
-     padding-top: 60px;
-     white-space: nowrap;
-     -webkit-box-shadow: 20px 10px 13px -14px rgba(10,10,10,0.05); 
-   box-shadow: 20px 10px 13px -14px rgba(10,10,10,0.05);
-   } 
-   
-   .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: #818181;
-    display: block;
-    transition: all .6s;
-   }
-   
-   .sidebar a:hover { 
-    color: #333;
-    transition: all .6s;
-    background-color: rgba(255, 255, 255, 0.204);
-   }
-   
-   main .sidebar {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 1.5rem;
-    margin-left: 50px;
-   }
-   
-   .material-icons,
-   .icon-text {
-    vertical-align: middle;
-   }
-   
-   .material-icons {
-    padding-bottom: 3px;
-    margin-right: 2rem;
-   }
-   
-   #main {
-    padding: 16px;
-    margin-left: 85px;
-    transition: margin-left 0.5s;
-   }
-   
-   @media screen and (max-height: 450px) {
-    .sidebar {
-      padding-top: 15px;
-    }
-    .sidebar a {
-      font-size: 18px;
-    }
-   }
-   
 .wrap {
     height: 100vh;
     margin: 0 auto;
@@ -71,6 +7,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+ 
     .left{
         background-color: red;
         position: relative;
@@ -89,6 +26,7 @@
         }
         }
     }
+
     .right {
         background-color: white;
         width: 85%;
@@ -108,10 +46,21 @@
             justify-content: top;
             padding: 1rem;
             height: 250px;
+            transition: .5s;
             border-radius: .3rem;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+                // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+            }
             img{
                 width: 20%;
             }
+        }
+        .activeCard {
+            transform: scale(1.1);
+            z-index: 300;
         }
         .yellow {
             background-color: #e5ae2f30;
@@ -129,7 +78,6 @@
             padding: 1rem;
             color: #76A27F;
             font-family: 'Montserrat', sans-serif;
-            
         }
         .purple {
             background-color:#dab6c238;
@@ -159,7 +107,7 @@
         .blue {
             background-color: #3a56a32a;
             padding: 1rem;
-            color:   #3A56A3; 
+            color:   #3A56A3!important; 
             img{
                 width: 35%;
             }
@@ -198,16 +146,23 @@
         transition: all 0.6s ease;
     }
 }
+.vert {
+    color: #D4E496!important;
+}
 
 .orange {
-    color: orange;
+    color: orange!important;
 }
 .rose {
-    color: pink;
+    color: #dab6c2!important;
 }
 .bleu {
-    color: blue;
+    color: #3A56A3!important;
 }
+.jaune {
+    color: #e5ae2f!important;
+}
+
 
 @media screen and (max-width: 1000px){
     .wrap .right .card {
@@ -234,3 +189,10 @@
     transition: margin-left 0.5s;
    }
 }
+
+@media screen and (max-width: 450px){
+    .openSide {
+        width: 100%!important;
+    }
+}
+
