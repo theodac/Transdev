@@ -29,16 +29,16 @@ module.exports = {
   },
   async getBuyings(req, res) {
     let buyingEntries = [];
-    if (req.body.startDate) {
-      if (req.body.endDate && req.body.endDate !== "") {
+    if (req.query.startDate) {
+      if (req.query.endDate && req.query.endDate !== "") {
         buyingEntries = await Buying.find({
           dataDate: {
-            $gte: moment.utc(req.body.startDate),
-            $lte: moment.utc(req.body.endDate)
+            $gte: moment.utc(req.query.startDate),
+            $lte: moment.utc(req.query.endDate)
           }
         })
       } else {
-        buyingEntries = await Buying.find({dataDate: moment.utc(req.body.startDate)})
+        buyingEntries = await Buying.find({dataDate: moment.utc(req.query.startDate)})
       }
     } else 
     buyingEntries = await Buying.find();
