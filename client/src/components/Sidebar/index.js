@@ -12,34 +12,39 @@ const Sidebar = () => {
 
   const links = [
     {
+      name: "Accueil",
+      icon: "home",
+      path: "/",
+    },
+    {
       name: "Achat",
       icon: "euro",
-      path: "/",
+      path: "/achat",
     },
     {
       name: "Commercial",
       icon: "bar_chart",
-      path: "/",
+      path: "/commerciale",
     },
     {
       name: "R. Humaines",
       icon: "group",
-      path: "/",
+      path: "/ressources_humaines",
     },
     {
       name: "Technique",
       icon: "settings_suggest",
-      path: "/",
+      path: "/technique",
     },
     {
       name: "Exploitation",
       icon: "local_activity",
-      path: "/",
+      path: "/exploitation",
     },
     {
       name: "Environnement",
       icon: "eco",
-      path: "/",
+      path: "/environnement",
     },
   ];
 

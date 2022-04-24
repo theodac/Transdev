@@ -1,0 +1,247 @@
+@import '../global.scss';
+
+:root {
+  --color1: #DBE5CA;
+  --color2: #58716E;
+  --color3: #DBE5CA;
+  --color4: #668961;
+  --color5: #ABC69D;
+  --gris : #8F8F8F;
+
+}
+
+#environnement {
+  .wrap_single {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 7rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    gap: 5px;
+    text-align: center;
+
+    p {
+      color: var(--gris);
+    }
+    p.exploitation {
+     text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: -200px;
+    }
+
+    p.technique {
+     text-transform: uppercase;
+      position: absolute;
+      top: 50%;
+      left: 270px;
+    }
+
+    p.commerciale {
+     text-transform: uppercase;
+      position: absolute;
+      top: -40%;
+      left: 25%;
+    }
+
+    p.ressources {
+     text-transform: uppercase;
+      position: absolute;
+      bottom: -31%;
+      left: 14%;
+    }
+
+  }
+
+  .wrap_single h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $color_green_11;
+  }
+  .wrap_single p {
+   font-size: .7rem;
+   color: $color_green_11;
+ }
+
+
+  .wrap_single>div {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0px 10px;
+  }
+
+  .icon {
+    font-size: 4rem;
+    color: $color_green_11;
+   }
+
+  .cube1 {
+    width: 200px;
+    height: 200px;
+    background: $color_green_10;
+  }
+
+  .cube2 {
+    width: 200px;
+    height: 200px;
+    background: #F8F8F8;
+    position: relative;
+    .arrow_top::before {
+      content: ">>";
+      position: absolute;
+      top: -126px;
+      left: 33%;
+      transform: rotate(268deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: #E5AF2F;
+    }
+
+
+  }
+
+  .cube3 {
+    width: 200px;
+    height: 200px;
+    background: $color_green_11;
+  }
+
+  .cube4 {
+    width: 200px;
+    height: 200px;
+    background: #F8F8F8;
+    position: relative;
+    .arrow_left::before {
+      content: ">>";
+      position: absolute;
+      bottom: 38px;
+      left: -125%;
+      transform: rotate(179deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: #E5AF2F;
+    }
+  }
+
+  .cube5 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background: $color_green_3;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cube6 {
+    width: 200px;
+    height: 200px;
+    background: #F8F8F8;
+    position: relative;
+    .arrow_right::before {
+      content: ">>";
+      position: absolute;
+      bottom: 46px;
+      right: -107%;
+      transform: rotate(359deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: #E5AF2F;
+    }
+
+  }
+
+  .cube7 {
+    width: 200px;
+    height: 200px;
+    background: $color_green_7;
+  }
+
+  .cube8 {
+    width: 200px;
+    height: 200px;
+    background: #F8F8F8;
+    position: relative;
+    .arrow_down::before {
+      content: ">>";
+      position: absolute;
+      bottom: -120px;
+      left: 40%;
+      transform: rotate(89deg);
+      font-weight: bold;
+      font-size: 42px;
+      color: #E5AF2F;
+    }
+
+  }
+
+  .cube9 {
+    width: 200px;
+    height: 200px;
+    background: $color_green_5;
+  }
+
+  .text_damier {
+    max-height: 60px;
+  }
+
+  p.number {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: grey;
+  }
+
+
+  .technique,
+  .commerciale,
+  .exploitation,
+  .ressources {
+    text-transform: uppercase;
+  }
+
+  .btn-voir {
+    cursor: pointer;
+    background: #094F66;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    transition: all .6s;
+
+   &:hover {
+    transition: all .6s;
+    color: #094F66;
+    outline: 1px solid #094F66;
+    background-color: white;
+   }
+  }
+  input#start {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  @media (max-width: 800px) {
+
+    .cube1, .cube3 , .cube5, .cube7, .cube9 {
+      display: none;
+    }
+    .technique, .exploitation, .commerciale, .ressources, .arrow_down::before, .arrow_left::before, .arrow_right::before, .arrow_top::before {
+      display: none;
+    }
+    .wrap_single {
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+  }
+}
