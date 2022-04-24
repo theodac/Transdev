@@ -25,42 +25,42 @@ const Cube = () => {
     // Let's define a command.
     annyang.setLanguage("fr");
     var commands = {
-      "montre un": function () {
+      "montre achat": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-front");
         fade();
         speechSynthesis("Salut a tous", "fr-FR");
       },
-      "montre deux": function () {
+      "montre commercial": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-back");
         fade();
         speechSynthesis("Salut a tous", "fr-FR");
       },
-      "montre trois": function () {
+      "montre RH": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-right");
         fade();
         speechSynthesis("Salut a tous", "fr-FR");
       },
-      "montre quatre": function () {
+      "montre meca": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-left");
         fade();
         speechSynthesis("Salut a tous", "fr-FR");
       },
-      "montre cinq": function () {
+      "montre exploitation": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-top");
         fade();
         speechSynthesis("Salut a tous", "fr-FR");
       },
-      "montre six": function () {
+      "montre environnement": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-bottom");
