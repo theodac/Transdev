@@ -139,7 +139,33 @@ const Cube = () => {
                 soit environ <span>+3.7 M en cumulé à fin août</span>
               </p>
             </figure>
-            <figure className="back details">blank</figure>
+            <figure className="back details">
+              <div className="cart cube1"></div>
+              <div className="cart cube2">
+                <h2>commande passées</h2>
+                <div className="number">148 634</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube3"></div>
+              <div className="cart cube4">
+                <h2>Statistiques 2</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube5"></div>
+              <div className="cart cube6">
+                <h2>Statistiques 3</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube7"></div>
+              <div className="cart cube8">
+                <h2>Statistiques 4</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube9"></div>
+            </figure>
             <figure className="right title">
               <User />
               <h1>R H</h1>
@@ -148,7 +174,33 @@ const Cube = () => {
                 soit environ <span>+3.7 M en cumulé à fin août</span>
               </p>
             </figure>
-            <figure className="right details">blank</figure>
+            <figure className="right details">
+              <div className="cart cube1"></div>
+              <div className="cart cube2">
+                <h2>commande passées</h2>
+                <div className="number">148 634</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube3"></div>
+              <div className="cart cube4">
+                <h2>Statistiques 2</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube5"></div>
+              <div className="cart cube6">
+                <h2>Statistiques 3</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube7"></div>
+              <div className="cart cube8">
+                <h2>Statistiques 4</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube9"></div>
+            </figure>
             <figure className="left title">
               <Meca />
               <h1>Meca</h1>
@@ -157,7 +209,33 @@ const Cube = () => {
                 soit environ <span>+3.7 M en cumulé à fin août</span>
               </p>
             </figure>
-            <figure className="left details">blank</figure>
+            <figure className="left details">
+              <div className="cart cube1"></div>
+              <div className="cart cube2">
+                <h2>commande passées</h2>
+                <div className="number">148 634</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube3"></div>
+              <div className="cart cube4">
+                <h2>Statistiques 2</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube5"></div>
+              <div className="cart cube6">
+                <h2>Statistiques 3</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube7"></div>
+              <div className="cart cube8">
+                <h2>Statistiques 4</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube9"></div>
+            </figure>
             <figure className="top title">
               <Ticket />
               <h1>Exploitation</h1>
@@ -166,7 +244,33 @@ const Cube = () => {
                 soit environ <span>+3.7 M en cumulé à fin août</span>
               </p>
             </figure>
-            <figure className="top details">blank</figure>
+            <figure className="top details">
+              <div className="cart cube1"></div>
+              <div className="cart cube2">
+                <h2>commande passées</h2>
+                <div className="number">148 634</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube3"></div>
+              <div className="cart cube4">
+                <h2>Statistiques 2</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube5"></div>
+              <div className="cart cube6">
+                <h2>Statistiques 3</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube7"></div>
+              <div className="cart cube8">
+                <h2>Statistiques 4</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube9"></div>
+            </figure>
             <figure className="bottom title">
               <Feuille />
               <h1>Environement</h1>
@@ -175,7 +279,33 @@ const Cube = () => {
                 soit environ <span>+3.7 M en cumulé à fin août</span>
               </p>
             </figure>
-            <figure className="bottom details">blank</figure>
+            <figure className="bottom details">
+              <div className="cart cube1"></div>
+              <div className="cart cube2">
+                <h2>commande passées</h2>
+                <div className="number">148 634</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube3"></div>
+              <div className="cart cube4">
+                <h2>Statistiques 2</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube5"></div>
+              <div className="cart cube6">
+                <h2>Statistiques 3</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube7"></div>
+              <div className="cart cube8">
+                <h2>Statistiques 4</h2>
+                <div className="number">Lorem ipsum dolor sit amet,</div>
+                <button className="btn-voir">en voir plus...</button>
+              </div>
+              <div className="cart cube9"></div>
+            </figure>
           </div>
         </section>
       </div>

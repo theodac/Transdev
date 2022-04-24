@@ -219,22 +219,27 @@ a {color:#eee;text-decoration:none;}
     transform: rotateY(   0deg ) translateZ( 250px );
   }
   .back {
+    flex-flow: row wrap;
     background: #F9E1A7;
     transform: rotateX( 180deg ) translateZ( 250px );
   }
   .right { 
+    flex-flow: row wrap;
     background: #DAB6C2;
     transform: rotateY(  90deg ) translateZ( 250px ); 
   }
   .left {
+    flex-flow: row wrap;
     background: #FBDAA0;
     transform: rotateY( -90deg ) translateZ( 250px );
   }
   .top { 
+    flex-flow: row wrap;
     background: #3A56A3;
     transform: rotateX(  90deg ) translateZ( 250px ); 
   }
   .bottom {
+    flex-flow: row wrap;
     background: #37746E;
     transform: rotateX( -90deg ) translateZ( 250px ); 
   }
