@@ -30,42 +30,42 @@ const Cube = () => {
         cube.className = "";
         cube.classList.add("show-front");
         fade();
-        speechSynthesis("Salut a tous", "fr-FR");
+        speechSynthesis("Voici le service achat", "fr-FR");
       },
       "montre commercial": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-back");
         fade();
-        speechSynthesis("Salut a tous", "fr-FR");
+        speechSynthesis("Voici le service commercial", "fr-FR");
       },
       "montre RH": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-right");
         fade();
-        speechSynthesis("Salut a tous", "fr-FR");
+        speechSynthesis("Voici le service resssources humaines", "fr-FR");
       },
       "montre meca": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-left");
         fade();
-        speechSynthesis("Salut a tous", "fr-FR");
+        speechSynthesis("Voici le service mecanique", "fr-FR");
       },
       "montre exploitation": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-top");
         fade();
-        speechSynthesis("Salut a tous", "fr-FR");
+        speechSynthesis("Voici le service exploitation", "fr-FR");
       },
       "montre environnement": function () {
         const cube = document.getElementById("cube");
         cube.className = "";
         cube.classList.add("show-bottom");
         fade();
-        speechSynthesis("Salut a tous", "fr-FR");
+        speechSynthesis("Voici le service environnement", "fr-FR");
       },
     };
 
