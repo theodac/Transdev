@@ -50,9 +50,9 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`sidebar ${opened ? "opened" : ""}`}
-      onMouseEnter={toggleSidebar}
-      onMouseLeave={toggleSidebar}
+     className={`sidebar ${opened ? "opened" : ""}`}
+     onMouseEnter={toggleSidebar}
+     onMouseLeave={toggleSidebar}
     >
       {links.map(({ name, icon, path }, index) => (
         <Link key={index} to={path}>
