@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGears } from '@fortawesome/free-solid-svg-icons'
 import "../../styles/pages/ressources_humaines.scss";
 import Sidebar from "../../components/Sidebar";
 import human_ressourcesAPI from "../../services/human_ressourcesAPI";
@@ -28,7 +26,6 @@ const RessourcesHumaine = () => {
       <div className="arrow_top"></div>
       <p className="achat">Achat</p>
       <h2>Taux absentéisme</h2>
-      <FontAwesomeIcon icon={faGears} className="icon" />
       <p>{ressourcesHumaineData.tauxAbsenteisme} %</p>
       <button className="btn-voir">en voir plus...</button>
      </div>
@@ -37,7 +34,6 @@ const RessourcesHumaine = () => {
       <div className="arrow_left"></div>
       <p className="technique">Technique</p>
       <h2>Taux de grève</h2>
-      <FontAwesomeIcon icon={faGears} className="icon" />
       <div className="text_damier"><p>{ressourcesHumaineData.tauxGreve} %</p>
        <button className="btn-voir">en voir plus...</button>
       </div>
@@ -50,7 +46,6 @@ const RessourcesHumaine = () => {
       <div className="arrow_right"></div>
       <p className="exploitation">Exploitation</p>
       <h2>Taux turnover</h2>
-      <FontAwesomeIcon icon={faGears} className="icon" />
       <p>{ressourcesHumaineData.tauxTurnOver} %</p>
       <button className="btn-voir">en voir plus...</button>
      </div>
@@ -59,7 +54,6 @@ const RessourcesHumaine = () => {
       <div className="arrow_down"></div>
       <p className="environnement">Environnement</p>
       <h2>Taux recrutement</h2>
-      <FontAwesomeIcon icon={faGears} className="icon" />
       <p>{ressourcesHumaineData.tauxRecrutement} %</p>
       <button className="btn-voir">en voir plus...</button>
      </div>
