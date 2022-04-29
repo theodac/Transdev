@@ -22,16 +22,16 @@ const Technique = () => {
 
    { techniqueData && <div id="technique">
     <div className="wrap_single">
-     <div className="cube1"></div>
-     <div className="cube2">
+     <div className="cude_2d_1"></div>
+     <div className="cude_2d_2">
       <div className="arrow_top"></div>
       <p className="commerciale">Commerciale</p>
       <h2>Taux panne tram</h2>
       <p>{techniqueData.tauxPannesTram} %</p>
       <button className="btn-voir">en voir plus...</button>
      </div>
-     <div className="cube3"></div>
-     <div className="cube4">
+     <div className="cude_2d_3"></div>
+     <div className="cude_2d_4">
       <div className="arrow_left"></div>
       <p className="environnement">Environnement</p>
       <h2>Taux pannes bus et teor</h2>
@@ -40,26 +40,26 @@ const Technique = () => {
        <button className="btn-voir">en voir plus...</button>
       </div>
      </div>
-     <div className="cube5">
+     <div className="cude_2d_5">
       <h2>Date : </h2>
       <input type="date" id="start" name="trip-start" />
      </div>
-     <div className="cube6">
+     <div className="cude_2d_6">
       <div className="arrow_right"></div>
       <p className="achat">Achat</p>
       <h2>Consommation tram par 100km</h2>
       <p>{techniqueData.consommationTramAuxCentsKms} KW/H</p>
       <button className="btn-voir">en voir plus...</button>
      </div>
-     <div className="cube7"></div>
-     <div className="cube8">
+     <div className="cude_2d_7"></div>
+     <div className="cude_2d_8">
       <div className="arrow_down"></div>
       <p className="ressources">Ressources humaines</p>
       <h2>Consommation bus et teor par 100km</h2>
       <p>{techniqueData.consommationBusEtTeorAuxCentsKms} L/100 KM</p>
       <button className="btn-voir">en voir plus...</button>
      </div>
-     <div className="cube9"></div>
+     <div className="cude_2d_9"></div>
 
 
     </div>
