@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
+body {
+  overflow-x: hidden;
+}
 .sidebar {
   height: 100%;
   width: 85px;
@@ -39,6 +41,10 @@
   font-size: 1.5rem;
   margin-left: 50px;
 }
+.iconLeft a{
+ margin-bottom: 2.3rem;
+}
+
 
 
 .material-icons,
@@ -95,6 +101,7 @@
   }
 
   .right {
+    background-color: white;
     width: 85%;
     height: 100vh;
     display: flex;
@@ -303,11 +310,13 @@
 @media screen and (max-width: 800px) {
   .wrap .right {
     padding: 0 1rem;
+    width: 100%;
   }
   .wrap .right .card {
     width: 99%;
     margin-bottom: 2rem;
     height: 40%;
+    margin-left: 5rem;
   }
 
   #main {

@@ -1,4 +1,7 @@
 import React from "react";
+import "../../styles/pages/home.scss";
+
+// import BasicCard from "../../components/basicCard";
 
 const HomePage = () => {
   function toggleSidebar() {
@@ -80,59 +83,59 @@ const HomePage = () => {
   return (
     <div className="wrap">
       <div
-       id="mySidebar"
-       className="sidebar"
-       onMouseEnter={toggleSidebar}
-       onMouseLeave={sidebarLeave}
+        id="mySidebar"
+        className="sidebar"
+        onMouseEnter={toggleSidebar}
+        onMouseLeave={sidebarLeave}
       >
         <div className="iconLeft">
           <a
-           href=""
-           onMouseEnter={() => hoverCard("")}
-           onMouseLeave={() => leaveCard("")}
+            href=""
+            onMouseEnter={() => hoverCard("")}
+            onMouseLeave={() => leaveCard("")}
           >
-            <i className=" fa-house">Home</i>
+            <i className="material-icons">home</i>
           </a>
           <a
-           href="/single"
-           id="link_achat"
-           onMouseEnter={() => hoverCard("CardGreen")}
-           onMouseLeave={() => leaveCard("CardGreen")}
+            href="/single"
+            id="link_achat"
+            onMouseEnter={() => hoverCard("CardGreen")}
+            onMouseLeave={() => leaveCard("CardGreen")}
           >
             <i className="material-icons vert">euro</i>
           </a>
           <a
-           href="#"
-           onMouseEnter={() => hoverCard("CardYellow")}
-           onMouseLeave={() => leaveCard("CardYellow")}
+            href="#"
+            onMouseEnter={() => hoverCard("CardYellow")}
+            onMouseLeave={() => leaveCard("CardYellow")}
           >
             <i className="material-icons jaune">bar_chart</i>
           </a>
           <a
-           href="#"
-           onMouseEnter={() => hoverCard("CardPurple")}
-           onMouseLeave={() => leaveCard("CardPurple")}
+            href="#"
+            onMouseEnter={() => hoverCard("CardPurple")}
+            onMouseLeave={() => leaveCard("CardPurple")}
           >
             <i className="material-icons rose">group</i>
           </a>
           <a
-           href="#"
-           onMouseEnter={() => hoverCard("CardOrange")}
-           onMouseLeave={() => leaveCard("CardOrange")}
+            href="#"
+            onMouseEnter={() => hoverCard("CardOrange")}
+            onMouseLeave={() => leaveCard("CardOrange")}
           >
             <i className="material-icons orange">settings_suggest</i>
           </a>
           <a
-           href="#"
-           onMouseEnter={() => hoverCard("CardBleu")}
-           onMouseLeave={() => leaveCard("CardBleu")}
+            href="#"
+            onMouseEnter={() => hoverCard("CardBleu")}
+            onMouseLeave={() => leaveCard("CardBleu")}
           >
             <i className="material-icons bleu">local_activity</i>
           </a>
           <a
-           href="#"
-           onMouseEnter={() => hoverCard("CardGreenLight")}
-           onMouseLeave={() => leaveCard("CardGreenLight")}
+            href="#"
+            onMouseEnter={() => hoverCard("CardGreenLight")}
+            onMouseLeave={() => leaveCard("CardGreenLight")}
           >
             <i className="material-icons vert">eco</i>
           </a>
