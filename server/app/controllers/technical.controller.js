@@ -23,11 +23,11 @@ module.exports = {
     const consommationTramAuxCentsKms = req.body.consommationTramAuxCentsKms;
     const tauxPannesTram = req.body.tauxPannesTram;
     const kmPerdu = req.body.kmPerdu;
-    const kmPerduAnnee = req.body.kmPerdu[0];
-    const kmPerduMois = req.body.kmPerdu[1];
-    const kmPerduMotif = req.body.kmPerdu[2];
-    const kmPerduMode = req.body.kmPerdu[3];
-    const kmPerduValeur = req.body.kmPerdu[4];
+    const kmPerduAnnee = req.body.kmPerdu.kmPerduAnnee;
+    const kmPerduMois = req.body.kmPerdu.kmPerduMois;
+    const kmPerduMotif = req.body.kmPerdu.kmPerduMotif;
+    const kmPerduMode = req.body.kmPerdu.kmPerduMode;
+    const kmPerduValeur = req.body.kmPerdu.kmPerduValeur;
 
     const dataDate = req.body.dataDate;
 

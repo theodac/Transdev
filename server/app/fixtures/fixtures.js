@@ -103,7 +103,6 @@ const loadFixtures = () => {
         let kmPerduMode = modes[Math.floor(Math.random()*modes.length)];
         let kmPerduValeur = getRandomInt(10,10000);
 
-        let kmPerdu = [kmPerduAnnee, kmPerduMois, kmPerduMotif, kmPerduMode, kmPerduValeur]
 
         technicalController.createTechnical({
             body: {
@@ -111,7 +110,13 @@ const loadFixtures = () => {
                 consommationBusEtTeorAuxCentsKms: consommationBusEtTeorAuxCentsKms,
                 consommationTramAuxCentsKms: consommationTramAuxCentsKms,
                 tauxPannesTram: tauxPannesTram,
-                kmPerdu: kmPerdu,
+                kmPerdu: {
+                    kmPerduAnnee:kmPerduAnnee,
+                    kmPerduMois:kmPerduMois,
+                    kmPerduMotif:kmPerduMotif,
+                    kmPerduMode:kmPerduMode,
+                    kmPerduValeur:kmPerduValeur
+                },
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);
