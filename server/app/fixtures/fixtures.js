@@ -94,12 +94,24 @@ const loadFixtures = () => {
         let consommationBusEtTeorAuxCentsKms = getRandomInt(30, 60); // L
         let consommationTramAuxCentsKms = getRandomInt(10, 30); // Wh
         let tauxPannesTram = getRandomInt(0, 2);
+
+        let kmPerduAnnee = getRandomInt(2010, 2020);
+        let kmPerduMois = getRandomInt(1,12)
+        let motifs = ['ACCIDENT', 'AGRESSION', 'BOUCHON'];
+        let kmPerduMotif = motifs[Math.floor(Math.random()*motifs.length)];
+        let modes = ['BUS', 'METRO', 'TEOR'];
+        let kmPerduMode = modes[Math.floor(Math.random()*modes.length)];
+        let kmPerduValeur = getRandomInt(10,10000);
+
+        let kmPerdu = [kmPerduAnnee, kmPerduMois, kmPerduMotif, kmPerduMode, kmPerduValeur]
+
         technicalController.createTechnical({
             body: {
                 tauxPannesBusEtTeor: tauxPannesBusEtTeor,
                 consommationBusEtTeorAuxCentsKms: consommationBusEtTeorAuxCentsKms,
                 consommationTramAuxCentsKms: consommationTramAuxCentsKms,
                 tauxPannesTram: tauxPannesTram,
+                kmPerdu: kmPerdu,
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);

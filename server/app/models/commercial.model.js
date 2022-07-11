@@ -1,6 +1,46 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const CommercialRecette = new Schema({
+    recetteCategorie: {
+        type:String
+    },
+    recetteMois:{
+        type:Number
+    },
+    recetteAnnee:{
+        type:Number
+    },
+    recetteSommeValeurHT:{
+        type:Number
+    }
+})
+
+const CommercialNbReclamation = new Schema({
+    nbReclamationNumeroDossier:{
+        type:Number
+    },
+    nbReclamationCode4:{
+        type:String
+    },
+    nbReclamationCodeSynthese2:{
+        type:String
+    },
+    nbReclamationEchantillon:{
+        type:String
+    },
+    nbReclamationDoublon:{
+        type:Number
+    },
+    nbReclamationAnnee:{
+        type:Number
+    },
+    nbReclamationMois:{
+        type:Number
+    }
+
+})
+
 const CommercialSchema = new Schema({
   recetteGlobale: {
     type: Number,
@@ -13,6 +53,12 @@ const CommercialSchema = new Schema({
   },
   nbReclamations: {
     type: Number
+  },
+  recette:{
+    type: CommercialRecette
+  },
+  nbReclamation: {
+    type:CommercialNbReclamation
   },
   dataDate: {
     type: Date

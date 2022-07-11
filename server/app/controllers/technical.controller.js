@@ -1,21 +1,51 @@
 const Technical = require("../models/technical.model");
 const moment = require("moment");
 
+var express = require('express')
+var bodyParser = require('body-parser')
+
+var app = express()
+
+
 module.exports = {
   async createTechnical(req, res) {
-    const {
+    /*const {
         tauxPannesBusEtTeor,
         consommationBusEtTeorAuxCentsKms,
         consommationTramAuxCentsKms,
         tauxPannesTram,
+        kmPerdu,
         dataDate
-    } = req.body;
+    } = req.body;*/
+
+    const tauxPannesBusEtTeor = req.body.tauxPannesBusEtTeor;
+    const consommationBusEtTeorAuxCentsKms = req.body.consommationBusEtTeorAuxCentsKms;
+    const consommationTramAuxCentsKms = req.body.consommationTramAuxCentsKms;
+    const tauxPannesTram = req.body.tauxPannesTram;
+    const kmPerdu = req.body.kmPerdu;
+    const kmPerduAnnee = req.body.kmPerdu[0];
+    const kmPerduMois = req.body.kmPerdu[1];
+    const kmPerduMotif = req.body.kmPerdu[2];
+    const kmPerduMode = req.body.kmPerdu[3];
+    const kmPerduValeur = req.body.kmPerdu[4];
+
+    const dataDate = req.body.dataDate;
+
+
+    const newTechnicalKmPerdu = new TechnicalKmPerdu({
+        kmPerduAnnee,
+        kmPerduMois,
+        kmPerduMotif,
+        kmPerduMode,
+        kmPerduValeur
+    })
 
     const newTechnical = new Technical({
         tauxPannesBusEtTeor,
         consommationBusEtTeorAuxCentsKms,
         consommationTramAuxCentsKms,
         tauxPannesTram,
+        newTechnicalKmPerdu,
         dataDate
     });
     await newTechnical.save();
