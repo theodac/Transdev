@@ -27,6 +27,67 @@ module.exports = {
       data: newBuying,
     });
   },
+
+  async getNbTotal(req, res){
+    let buyingEntries = [];
+
+    buyingEntries = await Buying.find();
+
+    let total = 0;
+    //console.log(buyingEntries[0]);
+    for(let i = 0; i<buyingEntries.length-1;i++){
+
+        total+=parseInt(buyingEntries[i].nbTotal);
+    }
+
+        if(!buyingEntries || buyingEntries.length === 0) {
+          return res.status(404).json({
+            success: false,
+            error: "Buying entries not found"
+          })
+        }
+
+        res.status(200).json({
+          success: true,
+          data: total,
+        });
+
+  },
+
+  async getNbTotalByDate(req, res){
+      let buyingEntries = [];
+      const { date } = req.params;
+      if(date != null){
+
+          buyingEntries = await Buying.find({
+          dataDate: {
+                  $lte: moment.utc(date)
+              }
+          });
+      }
+
+
+      let total = 0;
+      //console.log(buyingEntries[0]);
+      for(let i = 0; i<buyingEntries.length-1;i++){
+
+          total+=parseInt(buyingEntries[i].nbTotal);
+      }
+
+          if(!buyingEntries || buyingEntries.length === 0) {
+            return res.status(404).json({
+              success: false,
+              error: "Buying entries not found"
+            })
+          }
+
+          res.status(200).json({
+            success: true,
+            data: total,
+          });
+
+    },
+
   async getBuyings(req, res) {
     let buyingEntries = [];
     if (req.query.startDate) {

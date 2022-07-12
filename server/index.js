@@ -33,4 +33,4 @@ const startServer = (port) => {
     console.log(`Server started on port ${port}.`);
     loadFixtures();
 };
-startServer(process.env.PORT || 27017);
+startServer(process.env.PORT || 8080);
