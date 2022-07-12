@@ -8,6 +8,8 @@ module.exports = {
       nbNouveauxAbonnements,
       nbNouveauxPartenaires,
       nbReclamations,
+      recette,
+      nbReclamation,
       dataDate
     } = req.body;
 
@@ -16,6 +18,8 @@ module.exports = {
       nbNouveauxAbonnements,
       nbNouveauxPartenaires,
       nbReclamations,
+      recette,
+      nbReclamation,
       dataDate
     });
     await newCommercial.save();

@@ -35,6 +35,25 @@ const loadFixtures = () => {
         let nbNouveauxAbonnements = getRandomInt(10, 500);
         let nbNouveauxPartenaires = getRandomInt(1, 20);
         let nbReclamations = getRandomInt(0, 1);
+
+        let categories = ['CAT1', 'CAT2', 'CAT3'];
+        let recetteCategorie = motifs[Math.floor(Math.random()*categories.length)];
+
+        let recetteMois = getRandomInt(1, 12);
+        let recetteAnnee = getRandomInt(2000, 2020);
+        let recetteSommeValeurHT = getRandomInt(100, 10000);
+
+        let nbReclamationNumeroDossier = getRandomInt(1, 10000);
+
+        let code4 = ['testCode1', 'testCode2', 'testCode3'];
+        let nbReclamationCode4 = motifs[Math.floor(Math.random()*code4.length)];
+
+        let CodeSynthese2 = ['testCodeSynthese1', 'testCodeSynthese2', 'testCodeSynthese3'];
+        let nbReclamationCodeSynthese2 = motifs[Math.floor(Math.random()*code4.length)];
+
+        let echantillon = ['echantillon1', 'echantillon2', 'echantillon3'];
+        let nbReclamationCodeSynthese2 = motifs[Math.floor(Math.random()*code4.length)];
+
         commercialController.createCommercial({
             body: {
                 recetteGlobale: recetteGlobale,

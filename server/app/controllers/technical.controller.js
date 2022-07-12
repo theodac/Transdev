@@ -32,20 +32,20 @@ module.exports = {
     const dataDate = req.body.dataDate;
 
 
-    const newTechnicalKmPerdu = new TechnicalKmPerdu({
+    /*const newTechnicalKmPerdu = new TechnicalKmPerdu({
         kmPerduAnnee,
         kmPerduMois,
         kmPerduMotif,
         kmPerduMode,
         kmPerduValeur
-    })
+    })*/
 
     const newTechnical = new Technical({
         tauxPannesBusEtTeor,
         consommationBusEtTeorAuxCentsKms,
         consommationTramAuxCentsKms,
         tauxPannesTram,
-        newTechnicalKmPerdu,
+        kmPerdu,
         dataDate
     });
     await newTechnical.save();
