@@ -27,6 +27,32 @@ module.exports = {
       data: newQualityEnvironment,
     });
   },
+
+    async getQualityEnvironmentByDate(req, res){
+        let qualityEnvironmentEntries = [];
+        const { date } = req.params;
+        if(date != null){
+
+            qualityEnvironmentEntries = await QualityEnvironment.find({
+            dataDate: {
+                    $lte: moment.utc(date)
+                }
+            });
+        }
+
+        if(!qualityEnvironmentEntries || qualityEnvironmentEntries.length === 0) {
+          return res.status(404).json({
+              success: false,
+              error: "Quality Environment entries not found"
+          })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: qualityEnvironmentEntries,
+        });
+
+    },
   async getQualityEnvironmentEntries(req, res) {
     let qualityEnvironmentEntries = [];
     if (req.query.startDate) {

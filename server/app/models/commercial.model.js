@@ -5,12 +5,6 @@ const CommercialRecette = new Schema({
     recetteCategorie: {
         type:String
     },
-    recetteMois:{
-        type:Number
-    },
-    recetteAnnee:{
-        type:Number
-    },
     recetteSommeValeurHT:{
         type:Number
     }
@@ -32,12 +26,7 @@ const CommercialNbReclamation = new Schema({
     nbReclamationDoublon:{
         type:Number
     },
-    nbReclamationAnnee:{
-        type:Number
-    },
-    nbReclamationMois:{
-        type:Number
-    }
+
 
 })
 
@@ -54,12 +43,12 @@ const CommercialSchema = new Schema({
   nbReclamations: {
     type: Number
   },
-  recette:{
+  recette:[{
     type: CommercialRecette
-  },
-  nbReclamation: {
+  }],
+  nbReclamation: [{
     type:CommercialNbReclamation
-  },
+  }],
   dataDate: {
     type: Date
   }

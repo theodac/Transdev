@@ -6,6 +6,7 @@ technical
   .route("/")
   .post(technicalController.createTechnical)
   .get(technicalController.getTechnicalEntries);
+technical.route("/date/:date").get(technicalController.getTechnicalByDate);
 technical
   .route("/:id")
   .get(technicalController.getTechnicalEntry)

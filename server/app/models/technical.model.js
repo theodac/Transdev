@@ -2,12 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const TechnicalKmPerdu = new Schema({
-    kmPerduAnnee: {
-        type:Number
-    },
-    kmPerduMois:{
-        type:Number
-    },
     kmPerduMotif:{
         type:String
     },
@@ -32,9 +26,9 @@ const TechnicalSchema = new Schema({
     tauxPannesTram: {
       type: Number
     },
-    kmPerdu: {
+    kmPerdu: [{
       type: TechnicalKmPerdu
-    },
+    }],
 
     dataDate: {
         type: Date

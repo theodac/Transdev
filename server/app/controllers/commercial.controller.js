@@ -31,6 +31,33 @@ module.exports = {
       data: newCommercial,
     });
   },
+
+    async getCommercialByDate(req, res){
+        let commercialEntries = [];
+        const { date } = req.params;
+        if(date != null){
+
+            commercialEntries = await Commercial.find({
+            dataDate: {
+                    $lte: moment.utc(date)
+                }
+            });
+        }
+
+        if(!commercialEntries || commercialEntries.length === 0) {
+          return res.status(404).json({
+              success: false,
+              error: "Commercial entries not found"
+          })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: commercialEntries,
+        });
+
+    },
+
   async getCommercials(req, res) {
     let commercialEntries = [];
     if (req.query.startDate) {

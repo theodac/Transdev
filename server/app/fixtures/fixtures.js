@@ -64,6 +64,18 @@ const loadFixtures = () => {
                 nbNouveauxAbonnements: nbNouveauxAbonnements,
                 nbNouveauxPartenaires: nbNouveauxPartenaires,
                 nbReclamations: nbReclamations,
+                recette: [{
+                    recetteCategorie:recetteCategorie,
+                    recetteSommeValeurHT:recetteSommeValeurHT,
+                }],
+                nbReclamation: [{
+                    nbReclamationNumeroDossier:nbReclamationNumeroDossier,
+                    nbReclamationCode4:nbReclamationCode4,
+                    nbReclamationCodeSynthese2:nbReclamationCodeSynthese2,
+                    nbReclamationEchantillon:nbReclamationEchantillon,
+                    nbReclamationDoublon:nbReclamationDoublon,
+
+                }],
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);
@@ -75,6 +87,21 @@ const loadFixtures = () => {
         let nbAccidentsMateriels = getRandomInt(0, 5);
         let nbAccidentsCorporels = getRandomInt(0, 5);
         let tauxControle = getRandomInt(10, 100);
+
+        let tauxRecouvrementNbNumPV = getRandomInt(0, 7);
+        let tauxRecouvrementTotalAmendePaye = getRandomInt(0, 10);
+
+        let fraudeControleClientControle = getRandomInt(0, 1000);
+        let fraudeControleValidation
+        let fraudeControleTotalAmendes = getRandomInt(0, 10);
+
+        let accidentologieKmLigne
+        let accidentologieKmCategorie2
+
+        let accidentologieReferenceDossier
+        let accidentologieMode
+        let accidentologieLigne
+
         exploitationController.createExploitation({
             body: {
                 nbAccidentsMateriels: nbAccidentsMateriels,
@@ -133,13 +160,11 @@ const loadFixtures = () => {
                 consommationBusEtTeorAuxCentsKms: consommationBusEtTeorAuxCentsKms,
                 consommationTramAuxCentsKms: consommationTramAuxCentsKms,
                 tauxPannesTram: tauxPannesTram,
-                kmPerdu: {
-                    kmPerduAnnee:kmPerduAnnee,
-                    kmPerduMois:kmPerduMois,
+                kmPerdu: [{
                     kmPerduMotif:kmPerduMotif,
                     kmPerduMode:kmPerduMode,
                     kmPerduValeur:kmPerduValeur
-                },
+                }],
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);

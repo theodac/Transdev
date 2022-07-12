@@ -23,12 +23,6 @@ module.exports = {
     const consommationTramAuxCentsKms = req.body.consommationTramAuxCentsKms;
     const tauxPannesTram = req.body.tauxPannesTram;
     const kmPerdu = req.body.kmPerdu;
-    const kmPerduAnnee = req.body.kmPerdu.kmPerduAnnee;
-    const kmPerduMois = req.body.kmPerdu.kmPerduMois;
-    const kmPerduMotif = req.body.kmPerdu.kmPerduMotif;
-    const kmPerduMode = req.body.kmPerdu.kmPerduMode;
-    const kmPerduValeur = req.body.kmPerdu.kmPerduValeur;
-
     const dataDate = req.body.dataDate;
 
 
@@ -57,6 +51,31 @@ module.exports = {
       data: newTechnical,
     });
   },
+    async getTechnicalByDate(req, res){
+        let technicalEntries = [];
+        const { date } = req.params;
+        if(date != null){
+
+            technicalEntries = await Technical.find({
+            dataDate: {
+                    $lte: moment.utc(date)
+                }
+            });
+        }
+
+        if(!technicalEntries || technicalEntries.length === 0) {
+          return res.status(404).json({
+              success: false,
+              error: "Technical entries not found"
+          })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: technicalEntries,
+        });
+
+    },
   async getTechnicalEntries(req, res) {
     let technicalEntries = [];
     if (req.query.startDate) {

@@ -54,6 +54,32 @@ module.exports = {
 
   },
 
+  async getBuyingByDate(req, res){
+      let buyingEntries = [];
+      const { date } = req.params;
+      if(date != null){
+
+          buyingEntries = await Buying.find({
+          dataDate: {
+                  $lte: moment.utc(date)
+              }
+          });
+      }
+
+      if(!buyingEntries || buyingEntries.length === 0) {
+        return res.status(404).json({
+            success: false,
+            error: "Buying entries not found"
+        })
+      }
+
+      res.status(200).json({
+          success: true,
+          data: buyingEntries,
+      });
+
+  },
+
   async getNbTotalByDate(req, res){
       let buyingEntries = [];
       const { date } = req.params;
