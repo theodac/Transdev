@@ -1,21 +1,45 @@
 const Technical = require("../models/technical.model");
 const moment = require("moment");
 
+var express = require('express')
+var bodyParser = require('body-parser')
+
+var app = express()
+
+
 module.exports = {
   async createTechnical(req, res) {
-    const {
+    /*const {
         tauxPannesBusEtTeor,
         consommationBusEtTeorAuxCentsKms,
         consommationTramAuxCentsKms,
         tauxPannesTram,
+        kmPerdu,
         dataDate
-    } = req.body;
+    } = req.body;*/
+
+    const tauxPannesBusEtTeor = req.body.tauxPannesBusEtTeor;
+    const consommationBusEtTeorAuxCentsKms = req.body.consommationBusEtTeorAuxCentsKms;
+    const consommationTramAuxCentsKms = req.body.consommationTramAuxCentsKms;
+    const tauxPannesTram = req.body.tauxPannesTram;
+    const kmPerdu = req.body.kmPerdu;
+    const dataDate = req.body.dataDate;
+
+
+    /*const newTechnicalKmPerdu = new TechnicalKmPerdu({
+        kmPerduAnnee,
+        kmPerduMois,
+        kmPerduMotif,
+        kmPerduMode,
+        kmPerduValeur
+    })*/
 
     const newTechnical = new Technical({
         tauxPannesBusEtTeor,
         consommationBusEtTeorAuxCentsKms,
         consommationTramAuxCentsKms,
         tauxPannesTram,
+        kmPerdu,
         dataDate
     });
     await newTechnical.save();
@@ -27,6 +51,31 @@ module.exports = {
       data: newTechnical,
     });
   },
+    async getTechnicalByDate(req, res){
+        let technicalEntries = [];
+        const { date } = req.params;
+        if(date != null){
+
+            technicalEntries = await Technical.find({
+            dataDate: {
+                    $lte: moment.utc(date)
+                }
+            });
+        }
+
+        if(!technicalEntries || technicalEntries.length === 0) {
+          return res.status(404).json({
+              success: false,
+              error: "Technical entries not found"
+          })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: technicalEntries,
+        });
+
+    },
   async getTechnicalEntries(req, res) {
     let technicalEntries = [];
     if (req.query.startDate) {

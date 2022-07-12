@@ -27,6 +27,31 @@ module.exports = {
       data: newHumanRessources,
     });
   },
+    async getHumanRessourcesByDate(req, res){
+        let humanRessourcesEntries = [];
+        const { date } = req.params;
+        if(date != null){
+
+            humanRessourcesEntries = await HumanRessources.find({
+            dataDate: {
+                    $lte: moment.utc(date)
+                }
+            });
+        }
+
+        if(!humanRessourcesEntries || humanRessourcesEntries.length === 0) {
+          return res.status(404).json({
+              success: false,
+              error: "Human Ressources entries not found"
+          })
+        }
+
+        res.status(200).json({
+            success: true,
+            data: humanRessourcesEntries,
+        });
+
+    },
   async getHumanRessourcesEntries(req, res) {
     let humanRessourcesEntries = [];
     if (req.query.startDate) {

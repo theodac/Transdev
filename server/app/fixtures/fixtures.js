@@ -35,12 +35,47 @@ const loadFixtures = () => {
         let nbNouveauxAbonnements = getRandomInt(10, 500);
         let nbNouveauxPartenaires = getRandomInt(1, 20);
         let nbReclamations = getRandomInt(0, 1);
+
+        let categories = ['CAT1', 'CAT2', 'CAT3'];
+        let recetteCategorie = categories[Math.floor(Math.random()*categories.length)];
+
+        let recetteMois = getRandomInt(1, 12);
+        let recetteAnnee = getRandomInt(2000, 2020);
+        let recetteSommeValeurHT = getRandomInt(100, 10000);
+
+        let nbReclamationNumeroDossier = getRandomInt(1, 10000);
+
+        let code4 = ['testCode1', 'testCode2', 'testCode3'];
+        let nbReclamationCode4 = code4[Math.floor(Math.random()*code4.length)];
+
+        let CodeSynthese2 = ['testCodeSynthese1', 'testCodeSynthese2', 'testCodeSynthese3'];
+        let nbReclamationCodeSynthese2 = CodeSynthese2[Math.floor(Math.random()*code4.length)];
+
+        let echantillon = ['echantillon1', 'echantillon2', 'echantillon3'];
+        let nbReclamationEchantillon = echantillon[Math.floor(Math.random()*echantillon.length)];
+
+        nbReclamationDoublon = getRandomInt(1, 10000);
+        nbReclamationAnnee = getRandomInt(2000, 2020);
+        nbReclamationMois = getRandomInt(1, 12);
+
         commercialController.createCommercial({
             body: {
                 recetteGlobale: recetteGlobale,
                 nbNouveauxAbonnements: nbNouveauxAbonnements,
                 nbNouveauxPartenaires: nbNouveauxPartenaires,
                 nbReclamations: nbReclamations,
+                recette: [{
+                    recetteCategorie:recetteCategorie,
+                    recetteSommeValeurHT:recetteSommeValeurHT,
+                }],
+                nbReclamation: [{
+                    nbReclamationNumeroDossier:nbReclamationNumeroDossier,
+                    nbReclamationCode4:nbReclamationCode4,
+                    nbReclamationCodeSynthese2:nbReclamationCodeSynthese2,
+                    nbReclamationEchantillon:nbReclamationEchantillon,
+                    nbReclamationDoublon:nbReclamationDoublon,
+
+                }],
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);
@@ -52,12 +87,54 @@ const loadFixtures = () => {
         let nbAccidentsMateriels = getRandomInt(0, 5);
         let nbAccidentsCorporels = getRandomInt(0, 5);
         let tauxControle = getRandomInt(10, 100);
+
+        let tauxRecouvrementNbNumPV = getRandomInt(0, 7);
+        let tauxRecouvrementTotalAmendePaye = getRandomInt(0, 10);
+
+        let fraudeControleClientControle = getRandomInt(0, 1000);
+        let fraudeControleValidation = getRandomInt(0, 1000);
+        let fraudeControleTotalAmendes = getRandomInt(0, 10);
+
+        let lignes = ['l1', 'l2', 'l3'];
+        let accidentologieKmLigne = lignes[Math.floor(Math.random()*lignes.length)];
+        let accidentologieKmRealise = getRandomInt(0, 1000);
+        let categories2 = ['c1', 'c2', 'c3'];
+        let accidentologieKmCategorie2 = categories2[Math.floor(Math.random()*categories2.length)];
+
+
+        let referenceDossiers = ['rd1', 'rd2', 'rd3'];
+        let accidentologieReferenceDossier = referenceDossiers[Math.floor(Math.random()*referenceDossiers.length)];
+        let modes = ['BUS', 'METRO', 'TEOR'];
+        let accidentologieMode = modes[Math.floor(Math.random()*modes.length)];
+
+        let accidentologieLigne = lignes[Math.floor(Math.random()*lignes.length)];
+
         exploitationController.createExploitation({
             body: {
                 nbAccidentsMateriels: nbAccidentsMateriels,
                 nbAccidentsCorporels: nbAccidentsCorporels,
                 causeAccident: raison,
                 tauxControle: tauxControle,
+                accidentologieReferenceDossier:[{
+                    accidentologieReferenceDossier:accidentologieReferenceDossier,
+                    accidentologieMode:accidentologieMode,
+                    accidentologieLigne:accidentologieLigne
+                }],
+                tauxRecouvrement:[{
+                    tauxRecouvrementNbNumPV:tauxRecouvrementNbNumPV,
+                    tauxRecouvrementTotalAmendePaye:tauxRecouvrementTotalAmendePaye
+                }],
+                tauxFraudeTauxControle:[{
+                    fraudeControleClientControle:fraudeControleClientControle,
+                    fraudeControleValidation:fraudeControleValidation,
+                    fraudeControleTotalAmendes:fraudeControleTotalAmendes
+                }],
+                accidentologieKm:[{
+                    accidentologieKmLigne:accidentologieKmLigne,
+                    accidentologieKmRealise:accidentologieKmRealise,
+                    accidentologieKmCategorie2:accidentologieKmCategorie2
+                }],
+
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);
@@ -94,12 +171,26 @@ const loadFixtures = () => {
         let consommationBusEtTeorAuxCentsKms = getRandomInt(30, 60); // L
         let consommationTramAuxCentsKms = getRandomInt(10, 30); // Wh
         let tauxPannesTram = getRandomInt(0, 2);
+
+        let kmPerduAnnee = getRandomInt(2010, 2020);
+        let kmPerduMois = getRandomInt(1,12)
+        let motifs = ['ACCIDENT', 'AGRESSION', 'BOUCHON'];
+        let kmPerduMotif = motifs[Math.floor(Math.random()*motifs.length)];
+        let kmPerduMode = modes[Math.floor(Math.random()*modes.length)];
+        let kmPerduValeur = getRandomInt(10,10000);
+
+
         technicalController.createTechnical({
             body: {
                 tauxPannesBusEtTeor: tauxPannesBusEtTeor,
                 consommationBusEtTeorAuxCentsKms: consommationBusEtTeorAuxCentsKms,
                 consommationTramAuxCentsKms: consommationTramAuxCentsKms,
                 tauxPannesTram: tauxPannesTram,
+                kmPerdu: [{
+                    kmPerduMotif:kmPerduMotif,
+                    kmPerduMode:kmPerduMode,
+                    kmPerduValeur:kmPerduValeur
+                }],
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);

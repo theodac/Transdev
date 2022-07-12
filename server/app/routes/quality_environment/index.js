@@ -6,6 +6,7 @@ qualityEnvironment
   .route("/")
   .post(qualityEnvironmentController.createQualityEnvironment)
   .get(qualityEnvironmentController.getQualityEnvironmentEntries);
+qualityEnvironment.route("/date/:date").get(qualityEnvironmentController.getQualityEnvironmentByDate);
 qualityEnvironment
   .route("/:id")
   .get(qualityEnvironmentController.getQualityEnvironmentEntry)

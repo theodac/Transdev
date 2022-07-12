@@ -6,6 +6,7 @@ humanRessources
   .route("/")
   .post(humanRessourcesController.createHumanRessources)
   .get(humanRessourcesController.getHumanRessourcesEntries);
+humanRessources.route("/date/:date").get(humanRessourcesController.getHumanRessourcesByDate);
 humanRessources
   .route("/:id")
   .get(humanRessourcesController.getHumanRessourcesEntry)

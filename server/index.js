@@ -31,6 +31,6 @@ const startServer = (port) => {
 
     app.listen(port);
     console.log(`Server started on port ${port}.`);
-    //loadFixtures();
+    loadFixtures();
 };
 startServer(process.env.PORT || 8080);

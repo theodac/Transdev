@@ -6,6 +6,7 @@ commercial
   .route("/")
   .post(commercialController.createCommercial)
   .get(commercialController.getCommercials);
+commercial.route("/date/:date").get(commercialController.getCommercialByDate);
 commercial
   .route("/:id")
   .get(commercialController.getCommercial)
