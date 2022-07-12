@@ -52,7 +52,11 @@ const loadFixtures = () => {
         let nbReclamationCodeSynthese2 = motifs[Math.floor(Math.random()*code4.length)];
 
         let echantillon = ['echantillon1', 'echantillon2', 'echantillon3'];
-        let nbReclamationCodeSynthese2 = motifs[Math.floor(Math.random()*code4.length)];
+        let nbReclamationEchantillon = motifs[Math.floor(Math.random()*echantillon.length)];
+
+        nbReclamationDoublon = getRandomInt(1, 10000);
+        nbReclamationAnnee = getRandomInt(2000, 2020);
+        nbReclamationMois = getRandomInt(1, 12);
 
         commercialController.createCommercial({
             body: {
