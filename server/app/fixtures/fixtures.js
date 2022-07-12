@@ -92,15 +92,22 @@ const loadFixtures = () => {
         let tauxRecouvrementTotalAmendePaye = getRandomInt(0, 10);
 
         let fraudeControleClientControle = getRandomInt(0, 1000);
-        let fraudeControleValidation
+        let fraudeControleValidation = getRandomInt(0, 1000);
         let fraudeControleTotalAmendes = getRandomInt(0, 10);
 
-        let accidentologieKmLigne
-        let accidentologieKmCategorie2
+        let lignes = ['l1', 'l2', 'l3'];
+        let accidentologieKmLigne = lignes[Math.floor(Math.random()*lignes.length)];
+        let accidentologieKmRealise = getRandomInt(0, 1000);
+        let categories2 = ['c1', 'c2', 'c3'];
+        let accidentologieKmCategorie2 = categories2[Math.floor(Math.random()*categories2.length)];
 
-        let accidentologieReferenceDossier
-        let accidentologieMode
-        let accidentologieLigne
+
+        let referenceDossiers = ['rd1', 'rd2', 'rd3'];
+        let accidentologieReferenceDossier = referenceDossiers[Math.floor(Math.random()*referenceDossiers.length)];
+        let modes = ['BUS', 'METRO', 'TEOR'];
+        let accidentologieMode = modes[Math.floor(Math.random()*modes.length)];
+
+        let accidentologieLigne = lignes[Math.floor(Math.random()*lignes.length)];
 
         exploitationController.createExploitation({
             body: {
@@ -108,6 +115,26 @@ const loadFixtures = () => {
                 nbAccidentsCorporels: nbAccidentsCorporels,
                 causeAccident: raison,
                 tauxControle: tauxControle,
+                accidentologieReferenceDossier:[{
+                    accidentologieReferenceDossier:accidentologieReferenceDossier,
+                    accidentologieMode:accidentologieMode,
+                    accidentologieLigne:accidentologieLigne
+                }],
+                tauxRecouvrement:[{
+                    tauxRecouvrementNbNumPV:tauxRecouvrementNbNumPV,
+                    tauxRecouvrementTotalAmendePaye:tauxRecouvrementTotalAmendePaye
+                }],
+                tauxFraudeTauxControle:[{
+                    fraudeControleClientControle:fraudeControleClientControle,
+                    fraudeControleValidation:fraudeControleValidation,
+                    fraudeControleTotalAmendes:fraudeControleTotalAmendes
+                }],
+                accidentologieKm:[{
+                    accidentologieKmLigne:accidentologieKmLigne,
+                    accidentologieKmRealise:accidentologieKmRealise,
+                    accidentologieKmCategorie2:accidentologieKmCategorie2
+                }],
+
                 dataDate: '2021-' + displayi + '-01'
             }
         }, null).then(r => null);
@@ -149,7 +176,6 @@ const loadFixtures = () => {
         let kmPerduMois = getRandomInt(1,12)
         let motifs = ['ACCIDENT', 'AGRESSION', 'BOUCHON'];
         let kmPerduMotif = motifs[Math.floor(Math.random()*motifs.length)];
-        let modes = ['BUS', 'METRO', 'TEOR'];
         let kmPerduMode = modes[Math.floor(Math.random()*modes.length)];
         let kmPerduValeur = getRandomInt(10,10000);
 
