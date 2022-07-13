@@ -334,7 +334,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-/server/database/*
 server/.env
 # End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows,react,node
