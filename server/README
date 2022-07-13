@@ -1,0 +1,48 @@
+pour lancer le serveur:
+
+- npm -i
+- npm start
+
+si il y a des erreurs lors du lancement, ne me contactez pas, débrouillez vous.
+
+les models utilisés par /client (react):
+
+ - buying
+ - commercial
+ - exploitation
+ - human_ressources
+ - quality_environment
+ - technical
+
+les models utilisés par /angular (admin):
+
+  - buying
+  - commercial
+  - exploitationv2
+  - human_ressources
+  - quality_environment
+  - technical
+
+exploitation v2 est la version finale du model explotation mais /client
+utilise les paramètres de l'ancien modèle.
+
+les routes :
+
+pour obtenir tous les données en fonction d'un modèles :
+
+ - {URL_SERVEUR}/api/{modèle}/
+
+pour obtenir tous les données en fonction d'un modèles compris entre deux dates:
+
+ - {URL_SERVEUR}/api/{modèle}?startDate={date}&endDate={date}
+
+pour obtenir tous les données en fonction d'un modèle depuis le début des temps
+jusqu'a une date spécifique :
+
+ - {URL_SERVEUR}/api/{modèle}/date/{date}
+
+pour obtenir une donnée spécifique d'un modèle :
+
+ - {URL_SERVEUR}/api/{modèle}/{id}
+
+ de toute façon ça marche chez vous.
