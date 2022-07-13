@@ -10,23 +10,13 @@ const CommercialRecette = new Schema({
     }
 })
 
-const CommercialNbReclamation = new Schema({
-    nbReclamationNumeroDossier:{
+const CommercialReclamation = new Schema({
+    nbReclamations:{
         type:Number
     },
-    nbReclamationCode4:{
+    reclamationMotif:{
         type:String
     },
-    nbReclamationCodeSynthese2:{
-        type:String
-    },
-    nbReclamationEchantillon:{
-        type:String
-    },
-    nbReclamationDoublon:{
-        type:Number
-    },
-
 
 })
 
@@ -40,14 +30,11 @@ const CommercialSchema = new Schema({
   nbNouveauxPartenaires: {
     type: Number,
   },
-  nbReclamations: {
-    type: Number
-  },
   recette:[{
     type: CommercialRecette
   }],
-  nbReclamation: [{
-    type:CommercialNbReclamation
+  reclamation: [{
+    type:CommercialReclamation
   }],
   dataDate: {
     type: Date
