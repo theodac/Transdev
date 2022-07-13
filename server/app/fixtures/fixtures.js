@@ -45,18 +45,10 @@ const loadFixtures = () => {
 
         let nbReclamationNumeroDossier = getRandomInt(1, 10000);
 
-        let code4 = ['testCode1', 'testCode2', 'testCode3'];
-        let nbReclamationCode4 = code4[Math.floor(Math.random()*code4.length)];
+        let rMotif = ['motif1', 'motif2', 'motif3'];
+        let reclamationMotif = rMotif[Math.floor(Math.random()*rMotif.length)];
+        let nombreReclamations = getRandomInt(1, 100);
 
-        let CodeSynthese2 = ['testCodeSynthese1', 'testCodeSynthese2', 'testCodeSynthese3'];
-        let nbReclamationCodeSynthese2 = CodeSynthese2[Math.floor(Math.random()*code4.length)];
-
-        let echantillon = ['echantillon1', 'echantillon2', 'echantillon3'];
-        let nbReclamationEchantillon = echantillon[Math.floor(Math.random()*echantillon.length)];
-
-        nbReclamationDoublon = getRandomInt(1, 10000);
-        nbReclamationAnnee = getRandomInt(2000, 2020);
-        nbReclamationMois = getRandomInt(1, 12);
 
         commercialController.createCommercial({
             body: {
@@ -68,13 +60,9 @@ const loadFixtures = () => {
                     recetteCategorie:recetteCategorie,
                     recetteSommeValeurHT:recetteSommeValeurHT,
                 }],
-                nbReclamation: [{
-                    nbReclamationNumeroDossier:nbReclamationNumeroDossier,
-                    nbReclamationCode4:nbReclamationCode4,
-                    nbReclamationCodeSynthese2:nbReclamationCodeSynthese2,
-                    nbReclamationEchantillon:nbReclamationEchantillon,
-                    nbReclamationDoublon:nbReclamationDoublon,
-
+                reclamation: [{
+                    nombreReclamations:nombreReclamations,
+                    reclamationMotif:reclamationMotif
                 }],
                 dataDate: '2021-' + displayi + '-01'
             }
