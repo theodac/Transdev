@@ -11,7 +11,7 @@ const CommercialRecette = new Schema({
 })
 
 const CommercialReclamation = new Schema({
-    nbReclamations:{
+    nombreReclamations:{
         type:Number
     },
     reclamationMotif:{

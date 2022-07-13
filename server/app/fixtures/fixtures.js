@@ -47,7 +47,7 @@ const loadFixtures = () => {
 
         let rMotif = ['motif1', 'motif2', 'motif3'];
         let reclamationMotif = rMotif[Math.floor(Math.random()*rMotif.length)];
-        let nbReclamations = getRandomInt(1, 100);
+        let nombreReclamations = getRandomInt(1, 100);
 
 
         commercialController.createCommercial({
@@ -61,7 +61,7 @@ const loadFixtures = () => {
                     recetteSommeValeurHT:recetteSommeValeurHT,
                 }],
                 reclamation: [{
-                    nbReclamations:nbReclamations,
+                    nombreReclamations:nombreReclamations,
                     reclamationMotif:reclamationMotif
                 }],
                 dataDate: '2021-' + displayi + '-01'
