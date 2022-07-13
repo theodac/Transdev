@@ -1,40 +1,42 @@
 <c-row>
-  <c-col xs="12">
-    <c-card class="mb-4">
+    <c-col xs="12">
+        <c-card class="mb-4">
 
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Formulaire permettant d'ajouter des données au cube exploitation
-        </p>
-        <c-row style="margin-top:10px;">
-          <c-col xs>
-            <input type="number" aria-label="Nom" cFormControl placeholder="Nombre d'accidents materiels" />
-          </c-col>
-          <c-col xs>
-            <input aria-label="Email" cFormControl placeholder="Nombre d'accidents corporels" />
-          </c-col>
+            <c-card-body>
+                <p class="text-medium-emphasis small">
+                    Formulaire permettant d'ajouter des données au cube exploitation
+                </p>
+                <c-row style="margin-top:10px;">
+                    <c-col xs>
+                        <input [(ngModel)]="exploitation.nbAccidentsMateriels" type="number" aria-label="Nom" cFormControl placeholder="Nombre d'accidents materiels"/>
+                    </c-col>
+                    <c-col xs>
+                        <input [(ngModel)]="exploitation.nbAccidentsCorporels" type="number" aria-label="Email" cFormControl placeholder="Nombre d'accidents corporels"/>
+                    </c-col>
 
-        </c-row>
-        <c-row style="margin-top:10px;">
-          <c-col xs>
-            <input type="number" aria-label="Nom" cFormControl placeholder="Cause accident" />
-          </c-col>
-          <c-col xs>
-            <input aria-label="Email" cFormControl placeholder="Taux controle" />
-          </c-col>
+                </c-row>
+                <c-row style="margin-top:10px;">
+                    <c-col xs>
+                        <input [(ngModel)]="exploitation.causeAccident" type="text" aria-label="Nom" cFormControl placeholder="Cause accident"/>
+                    </c-col>
+                    <c-col xs>
+                        <input [(ngModel)]="exploitation.tauxControle" type="number" cFormControl placeholder="Taux controle"/>
+                    </c-col>
 
-        </c-row>
-        <c-row style="margin-top:10px;">
-          <c-col xs>
-            <input type="date" aria-label="Nom" cFormControl placeholder="Date données" />
-          </c-col>
-        </c-row>
-        <c-row style="margin-top: 10px;">
-          <button cButton
-                  class="me-1"
-          >Sauvegarder</button>
-        </c-row>
-      </c-card-body>
-    </c-card>
-  </c-col>
+                </c-row>
+                <c-row style="margin-top:10px;">
+                    <c-col xs>
+                        <input [(ngModel)]="exploitation.dataDate" type="date" aria-label="Nom" cFormControl placeholder="Date données"/>
+                    </c-col>
+                </c-row>
+                <c-row style="margin-top: 10px;">
+                    <button cButton
+                            (click)="addData()"
+                            class="me-1"
+                    >Sauvegarder
+                    </button>
+                </c-row>
+            </c-card-body>
+        </c-card>
+    </c-col>
 </c-row>

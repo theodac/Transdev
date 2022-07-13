@@ -1,40 +1,43 @@
 <c-row>
-  <c-col xs="12">
-    <c-card class="mb-4">
+    <c-col xs="12">
+        <c-card class="mb-4">
 
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Formulaire permettant d'ajouter des données au cube ressource humaines
-        </p>
-        <c-row style="margin-top:10px;">
-          <c-col xs>
-            <input type="number" aria-label="Nom" cFormControl placeholder="Taux absenteisme" />
-          </c-col>
-          <c-col xs>
-            <input aria-label="Email" cFormControl placeholder="Taux greve" />
-          </c-col>
+            <c-card-body>
+                <p class="text-medium-emphasis small">
+                    Formulaire permettant d'ajouter des données au cube ressource humaines
+                </p>
+                <c-row style="margin-top:10px;">
+                    <c-col xs>
+                        <input [(ngModel)]="cube.absenteisme" type="number" aria-label="Nom" cFormControl placeholder="Taux absenteisme"/>
+                    </c-col>
+                    <c-col xs>
+                        <input [(ngModel)]="cube.greve" type="number" aria-label="Email" cFormControl placeholder="Taux greve"/>
+                    </c-col>
 
-        </c-row>
-        <c-row style="margin-top:10px;">
-          <c-col xs>
-            <input type="number" aria-label="Nom" cFormControl placeholder="Taux recrutement" />
-          </c-col>
-          <c-col xs>
-            <input aria-label="Email" cFormControl placeholder="Taux turn over" />
-          </c-col>
+                </c-row>
+                <c-row style="margin-top:10px;">
+                    <c-col xs>
+                        <input [(ngModel)]="cube.recrutement" type="number" aria-label="Nom" cFormControl placeholder="Taux recrutement"/>
+                    </c-col>
+                    <c-col xs>
+                        <input [(ngModel)]="cube.turn" type="number" aria-label="Email" cFormControl placeholder="Taux turn over"/>
+                    </c-col>
 
-        </c-row>
-        <c-row style="margin-top:10px;">
-          <c-col xs>
-            <input type="date" aria-label="Nom" cFormControl placeholder="Date données" />
-          </c-col>
-        </c-row>
-        <c-row style="margin-top: 10px;">
-          <button cButton
-                  class="me-1"
-          >Sauvegarder</button>
-        </c-row>
-      </c-card-body>
-    </c-card>
-  </c-col>
+                </c-row>
+                <c-row style="margin-top:10px;">
+                    <c-col xs>
+                        <input [(ngModel)]="cube.date" type="date" aria-label="Nom" cFormControl placeholder="Date données"/>
+                    </c-col>
+                </c-row>
+
+                <c-row style="margin-top: 10px;">
+                    <button cButton
+                            (click)="addCube()"
+                            class="me-1"
+                    >Sauvegarder
+                    </button>
+                </c-row>
+            </c-card-body>
+        </c-card>
+    </c-col>
 </c-row>
