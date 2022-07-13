@@ -4,6 +4,7 @@ const exploitationController = require('../controllers/exploitation.controller')
 const humanRessourcesController = require('../controllers/human_ressources.controller');
 const qualityEnvironmentController = require('../controllers/quality_environment.controller');
 const technicalController = require('../controllers/technical.controller');
+const exploitationv2Controller = require('../controllers_v2/exploitation_v2.controller');
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -50,6 +51,7 @@ const loadFixtures = () => {
         let nombreReclamations = getRandomInt(1, 100);
 
 
+
         commercialController.createCommercial({
             body: {
                 recetteGlobale: recetteGlobale,
@@ -76,6 +78,9 @@ const loadFixtures = () => {
         let nbAccidentsCorporels = getRandomInt(0, 5);
         let tauxControle = getRandomInt(10, 100);
 
+        let tauxFraude = getRandomInt(1, 100);
+        let accidentologieNombre = getRandomInt(1, 100);
+
         let tauxRecouvrementNbNumPV = getRandomInt(0, 7);
         let tauxRecouvrementTotalAmendePaye = getRandomInt(0, 10);
 
@@ -85,6 +90,7 @@ const loadFixtures = () => {
 
         let lignes = ['l1', 'l2', 'l3'];
         let accidentologieKmLigne = lignes[Math.floor(Math.random()*lignes.length)];
+
         let accidentologieKmRealise = getRandomInt(0, 1000);
         let categories2 = ['c1', 'c2', 'c3'];
         let accidentologieKmCategorie2 = categories2[Math.floor(Math.random()*categories2.length)];
@@ -121,6 +127,23 @@ const loadFixtures = () => {
                     accidentologieKmLigne:accidentologieKmLigne,
                     accidentologieKmRealise:accidentologieKmRealise,
                     accidentologieKmCategorie2:accidentologieKmCategorie2
+                }],
+
+                dataDate: '2021-' + displayi + '-01'
+            }
+        }, null).then(r => null);
+
+        exploitationv2Controller.createExploitation({
+            body: {
+                nbAccidentsMateriels: nbAccidentsMateriels,
+                nbAccidentsCorporels: nbAccidentsCorporels,
+                causeAccident: raison,
+                tauxControle: tauxControle,
+                tauxFraude : tauxFraude,
+                accidentologie:[{
+                    ligne:accidentologieLigne,
+                    mode:accidentologieMode,
+                    nombre:accidentologieNombre
                 }],
 
                 dataDate: '2021-' + displayi + '-01'
